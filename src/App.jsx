@@ -6,9 +6,9 @@ import CountdownTimer from "./components/CountdownTimer";
 import "./App.css";
 
 function App() {
-  ////////////////////YYYY-MM-DD-HH-MM-SS 
-  const targetDate = "2026-09-25T09:00:00";
-  // const targetDate = "2026-09-02T17:00:00";
+  ////////////////////YYYY-MM-DD-HH-MM-SS
+  // const targetDate = "2026-09-25T09:00:00";
+  const targetDate = "2026-09-02T17:00:00";
 
   return (
     <>
@@ -89,7 +89,9 @@ function App() {
           </div>
 
           <div className="mb-8">
-            <h3 className="font-medium text-2xl md:text-4xl text-center">Lorem ipsum dolor sit amet</h3>
+            <h3 className="font-medium text-2xl md:text-4xl text-center">
+              Lorem ipsum dolor sit amet
+            </h3>
             <h5 className="text-sm md:text-xl text-center">
               Lorem ipsum dolor sit amet consectetur
             </h5>
@@ -120,6 +122,76 @@ function App() {
           </span>
         </div>
       </section>
+
+      {/* CARD - LOYALTY AWARDEES */}
+      <section className="bg-amber-100 p-6 mb-6 rounded-lg shadow-lg mx-10 md:mx-20">
+        <div className="flex flex-col items-center space-x-4">
+          <div className="text-center mb-6">
+            <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-800 text-center">
+              LOYALTY AWARDEES 2026
+            </h1>
+            <span className="text-gray-600 text-center text-sm">
+              Recognizing Decades of Service Excellence
+            </span>
+          </div>
+
+          {/* Years logo + Num of Awardee */}
+          <div className="grid grid-cols-2 md:flex gap-6">
+            <div className="flex flex-col items-center justify-evenly px-6 py-3">
+              <img
+                src="25-logo.png"
+                className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-25 md:w-40"
+              />
+
+              <span className="text-gray-600 text-center capitalize text-xs md:text-lg mt-2">
+                42 Employees awardee
+              </span>
+            </div>
+            <div className="flex flex-col items-center justify-evenly px-6 py-3">
+              <img
+                src="30-logo.png"
+                className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-25 md:w-40"
+              />
+
+              <span className="text-gray-600 text-center capitalize text-xs md:text-lg mt-2">
+                13 Employees awardee
+              </span>
+            </div>
+            <div className="flex flex-col items-center justify-evenly px-6 py-3">
+              <img
+                src="35-logo.png"
+                className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-25 md:w-40"
+              />
+
+              <span className="text-gray-600 text-center capitalize text-xs md:text-lg mt-2">
+                4 Employees awardee
+              </span>
+            </div>
+            <div className="flex flex-col items-center justify-evenly px-6 py-3">
+              <img
+                src="40-logo.png"
+                className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-25 md:w-40"
+              />
+
+              <span className="text-gray-600 text-center capitalize text-xs md:text-lg mt-2">
+                4 Employees awardee
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="bg-gradient-to-b from-black to-slate-800 text-amber-400 ">
+        <div className="flex flex-col items-center justify-center text-sm p-1.5 font-semibold">
+          <span className="text-center text-sm">
+            © 2026
+            <a href="#" className="pl-1 hover:underline">
+              Management Information System Office. <br /> All rights reserved.
+            </a>
+          </span>
+        </div>
+      </footer>
     </>
   );
 }
