@@ -6,8 +6,9 @@ import CountdownTimer from "./components/CountdownTimer";
 import "./App.css";
 
 function App() {
-  ////////////////////YYYY-MM-DD-HH-MM-SS
-  const targetDate = "2026-09-02T17:00:00";
+  ////////////////////YYYY-MM-DD-HH-MM-SS 
+  const targetDate = "2026-09-25T09:00:00";
+  // const targetDate = "2026-09-02T17:00:00";
 
   return (
     <>
@@ -72,7 +73,7 @@ function App() {
           <p className="text-gray-200 text-md md:text-3xl text-center py-4 font-light tracking-wide">
             Live on{" "}
             <span className="text-amber-400 font-semibold">
-              September 00, 2026
+              September 25, 2026
             </span>
           </p>
         </div>
@@ -111,7 +112,6 @@ function App() {
             <hr className="w-30 md:w-50 lg:w-110 text-[#D2AA0D]  filter drop-shadow-[0_0_0.25rem_#D2AA0D]"></hr>
           </span>
           <img
-            // src="logo-SPC-est.png"
             src="spclogo.png"
             className="bg-white p-0.5 mx-1 filter  border-2 drop-shadow-[0_0_0.25rem_#D2AA0D]  border-yellow-400 rounded-full w-20 h-20 zoom"
           />
