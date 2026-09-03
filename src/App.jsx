@@ -7,8 +7,8 @@ import "./App.css";
 
 function App() {
   ////////////////////YYYY-MM-DD-HH-MM-SS
-  // const targetDate = "2026-09-25T09:00:00";
-  const targetDate = "2026-09-03T17:00:00";
+  const targetDate = "2026-09-25T09:00:00";
+  // const targetDate = "2026-09-03T17:00:00";
 
   return (
     <>
@@ -127,18 +127,40 @@ function App() {
         </section>
 
         {/* Program Flow */}
-        <section className="lg:min-h-screen bg-amber-50 py-6  justify-center items-center ">
-          {/* <h2 className="text-center uppercase font-mono text-2xl px-3 md:text-3xl font-semibold pt-8 pb-6">
-            San Pablo City of Lakes Festival
-          </h2> */}
-
-          <div className=" flex flex-col-reverse md:grid md:grid-cols-3 gap-4 p-3 max-w-6xl mx-auto bg-re">
+        <section className="lg:min-h-screen bg-amber-50 flex justify-center items-center pb-6 md:pb-0">
+          <div className=" flex flex-col-reverse md:grid md:grid-cols-3 gap-4 p-3 max-w-6xl mx-auto">
             {/* LEFT SIDE */}
-            <div className="flex justify-center">
+            <div className="flex flex-col items-center gap-3">
               <img
                 src="prog-flow.png"
+                alt="Program Flow"
                 className="w-[380px] md:w-full backdrop-blur-lg bg-white border border-gray-200 rounded-2xl shadow-md md:col-span-1 object-fill"
               />
+
+              <a
+                href="prog-flow.png"
+                download="Gawad-Parangal-2026-Program-Flow.png"
+                className="md:hidden inline-flex items-center gap-2 px-4 py-2 rounded-full
+               bg-white text-black text-sm font-semibold border-2
+               shadow-md hover:bg-amber-300 active:scale-95
+               transition-all duration-200"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 3v12" />
+                  <path d="M7 10l5 5 5-5" />
+                  <path d="M5 21h14" />
+                </svg>
+                Download Program Flow
+              </a>
             </div>
 
             {/* RIGHT SIDE */}
@@ -155,11 +177,32 @@ function App() {
                 PROGRAM FLOW OF <br /> GAWAD PARANGAL 2026
               </h2>
 
-              {/* <p className="text-xs md:text-base text-center md:px-20">
-                Lorem ipsum is placeholder text commonly used in the graphic,
-                print, and publishing industries for previewing layouts and
-                visual mockups.
-              </p> */}
+              <button className="hidden md:block">
+                <a
+                  href="prog-flow.png"
+                  download="Gawad-Parangal-2026-Program-Flow.png"
+                  className="inline-flex items-center gap-2 px-8 py-3 rounded-full
+               bg-white text-amber-500 text-xl font-semibold border-2
+               shadow-md hover:bg-amber-300 hover:text-gray-800 active:scale-95
+               transition-all duration-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="size-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M12 3v12" />
+                    <path d="M7 10l5 5 5-5" />
+                    <path d="M5 21h14" />
+                  </svg>
+                  Download Program Flow
+                </a>
+              </button>
             </div>
           </div>
         </section>
@@ -231,7 +274,6 @@ function App() {
             alt="San Pablo City Logo"
             className="bg-white filter drop-shadow-[0_0_0.25rem_#D2AA0D] rounded-full w-10 md:w-12 transition-transform duration-300 hover:scale-110"
           />
-
 
           <p className="text-center text-[10px] md:text-sm  leading-relaxed">
             <span>
