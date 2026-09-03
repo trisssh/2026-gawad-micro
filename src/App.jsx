@@ -7,8 +7,8 @@ import "./App.css";
 
 function App() {
   ////////////////////YYYY-MM-DD-HH-MM-SS
-  const targetDate = "2026-09-25T09:00:00";
-  // const targetDate = "2026-09-03T17:00:00";
+  // const targetDate = "2026-09-25T09:00:00";
+  const targetDate = "2026-09-03T17:00:00";
 
   return (
     <>
@@ -225,23 +225,44 @@ function App() {
 
       {/* FOOTER */}
       <footer className="bg-gradient-to-b from-black to-slate-800 text-white">
-        <div className="max-w-5xl mx-auto flex flex-row items-center justify-between gap-3 px-6 py-4">
+        <div className="max-w-7xl mx-auto flex flex-row items-center justify-between gap-3 px-2 py-6 md:px-6 md:py-4">
           <img
             src="spclogo.png"
             alt="San Pablo City Logo"
             className="bg-white filter drop-shadow-[0_0_0.25rem_#D2AA0D] rounded-full w-10 md:w-12 transition-transform duration-300 hover:scale-110"
           />
 
-          <p className="text-center text-xs md:text-sm font-semibold leading-snug">
-            © 2026{" "}
-            <a
-              href="https://www.facebook.com/spc.mis"
-              className="hover:underline hover:text-amber-400"
-            >
-              Management Information System Office.
-            </a>
+
+          <p className="text-center text-[10px] md:text-sm  leading-relaxed">
+            <span>
+              © 2026{" "}
+              <a
+                href="https://www.sanpablocity.gov.ph/"
+                className="hover:underline hover:text-amber-400"
+              >
+                City Government of San Pablo.
+              </a>{" "}
+              All rights reserved.
+            </span>
             <br />
-            All rights reserved.
+            <span className="hidden md:block">
+              Develop by:{" "}
+              <a
+                href="https://www.facebook.com/spc.mis"
+                className="hover:underline hover:text-amber-400 font-semibold"
+              >
+                San Pablo City LGU – Management Information System Office.
+              </a>
+            </span>
+            <span className="md:hidden">
+              Develop by:{" "}
+              <a
+                href="https://www.facebook.com/spc.mis"
+                className="hover:underline hover:text-amber-400 font-semibold"
+              >
+                San Pablo City LGU – MIS Office.
+              </a>
+            </span>
           </p>
 
           <img
