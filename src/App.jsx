@@ -8,7 +8,7 @@ import "./App.css";
 function App() {
   ////////////////////YYYY-MM-DD-HH-MM-SS
   // const targetDate = "2026-09-25T09:00:00";
-  const targetDate = "2026-09-02T17:00:00";
+  const targetDate = "2026-09-03T17:00:00";
 
   return (
     <>
@@ -124,7 +124,7 @@ function App() {
       </section>
 
       {/* CARD - LOYALTY AWARDEES */}
-      <section className="bg-amber-100 p-6 mb-6 rounded-lg shadow-lg mx-10 md:mx-20">
+      <section className="bg-amber-100 p-6 mb-18 rounded-lg shadow-lg mx-10 md:mx-20">
         <div className="flex flex-col items-center space-x-4">
           <div className="text-center mb-6">
             <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-800 text-center">
@@ -182,14 +182,28 @@ function App() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-gradient-to-b from-black to-slate-800 text-amber-400 ">
-        <div className="flex flex-col items-center justify-center text-sm p-1.5 font-semibold">
-          <span className="text-center text-sm">
-            © 2026
-            <a href="#" className="pl-1 hover:underline">
-              Management Information System Office. <br /> All rights reserved.
+      <footer className="bg-gradient-to-b from-black to-slate-800 text-amber-500">
+        <div className="max-w-5xl mx-auto flex flex-row items-center justify-between gap-3 px-6 py-4">
+          <img
+            src="spclogo.png"
+            alt="San Pablo City Logo"
+            className="bg-white filter drop-shadow-[0_0_0.25rem_#D2AA0D] rounded-full w-10 md:w-12 transition-transform duration-300 hover:scale-110"
+          />
+
+          <p className="text-center text-xs md:text-sm font-semibold leading-snug">
+            © 2026{" "}
+            <a href="#" className="hover:underline hover:text-amber-400">
+              Management Information System Office.
             </a>
-          </span>
+            <br />
+            All rights reserved.
+          </p>
+
+          <img
+            src="Bagong-PH.png"
+            alt="Bagong Pilipinas Logo"
+            className="filter drop-shadow-[0_0_0.25rem_#D2AA0D] w-12 md:w-14 transition-transform duration-300 hover:scale-110"
+          />
         </div>
       </footer>
     </>
