@@ -12,6 +12,131 @@ function App() {
   // const targetDate = "2026-09-25T09:00:00";
   const targetDate = "2026-09-08T17:00:00";
 
+  const nomineeSections = [
+    {
+      title: "MGA NOMINADO MULA SA JOB ORDER",
+      subtitle: "6 Nominees from Job Order",
+      nominees: [
+        {
+          image: "/NOMINEES/JOB ORDER/ESCOLANO.png",
+          name: "ESCOLANO, JOHN CHRISTOPHER D.",
+          department: "City Assesor's Office",
+        },
+        {
+          image: "/NOMINEES/JOB ORDER/GESMUNDO.png",
+          name: "GESMUNDO, SERGE JOSHUA B.",
+          department: "City Mayor’s Office",
+        },
+        {
+          image: "/NOMINEES/JOB ORDER/HERNANDEZ.png",
+          name: "HERNANDEZ, KIM OLIVER C.",
+          department: "City Health Office",
+        },
+        {
+          image: "/NOMINEES/JOB ORDER/MEDINA.png",
+          name: "MEDINA, CHRISTIAN M.",
+          department: "City Population Office",
+        },
+        {
+          image: "/NOMINEES/JOB ORDER/MIRAL.png",
+          name: "MIRAL, MAYBELL B.",
+          department: "City Mayor’s Office",
+        },
+        {
+          image: "/NOMINEES/JOB ORDER/VENTURA.png",
+          name: "VENTURA, JENNIELYN A.",
+          department: "City Treasurer’s Office",
+        },
+      ],
+    },
+
+    {
+      title: "MGA NOMINADO MULA SA 1ST LEVEL",
+      subtitle: "Nominees from 1st Level",
+      nominees: [
+        {
+          image: "/NOMINEES/1ST LEVEL/BALITA.png",
+          name: "BALITA, CELESTE V.",
+          department: "CMO-MISO",
+        },
+        {
+          image: "/NOMINEES/1ST LEVEL/BAREZA.png",
+          name: "BAREZA, ALVIN A.",
+          department: "City Social Welfare & Development Office",
+        },
+        {
+          image: "/NOMINEES/1ST LEVEL/BUNDALIAN,-IRISH-SANDRA-C..png",
+          name: "BUNDALIAN, IRISH SANDRA C.",
+          department: "City Assessor’s Office",
+        },
+        {
+          image: "/NOMINEES/1ST LEVEL/ECO.png",
+          name: "ECO, JEANNELYN M.",
+          department: "City Tourism Office",
+        },
+        {
+          image: "/NOMINEES/1ST LEVEL/EXCONDE.png",
+          name: "EXCONDE, BRIANN M.",
+          department: "City Cooperative Office",
+        },
+        {
+          image: "/NOMINEES/1ST LEVEL/FORNILOZA.png",
+          name: "FORNILOZA, FERDINAND D.",
+          department: "City Treasurer’s Office",
+        },
+        {
+          image: "/NOMINEES/1ST LEVEL/LAGUNA.png",
+          name: "LAGUNA, MARIA LUISA J.",
+          department: "City Treasurer’s Office-Market Division",
+        },
+        {
+          image: "/NOMINEES/1ST LEVEL/RETUERTO.png",
+          name: "RETUERTO, NELSON C.",
+          department: "City Agriculturist’s Office",
+        },
+      ],
+    },
+
+    {
+      title: "MGA NOMINADO MULA SA 2ND LEVEL",
+      subtitle: "Nominees from 2nd Level",
+      nominees: [
+        {
+          image: "/NOMINEES/2ND LEVEL/BUNDALIAN, GILLIAN CLARISSE A..png",
+          name: "BUNDALIAN, GILLIAN CLARISSE A.",
+          department: "City Health Office",
+        },
+        {
+          image: "/NOMINEES/2ND LEVEL/MALIJAN.JPG",
+          name: "MALIJAN, MARITES S.",
+          department: "City Agriculturist’s Office",
+        },
+        {
+          image: "/NOMINEES/2ND LEVEL/PASCO.png",
+          name: "PASCO, LOIDA V.",
+          department: "City Assessor’s Office",
+        },
+        {
+          image: "/NOMINEES/2ND LEVEL/TUBIGAN.JPG",
+          name: "TUBIGAN, NANCY C.",
+          department: "City Treasurer’s Office",
+        },
+      ],
+    },
+
+    // {
+    //   title: "MGA NOMINADO MULA SA PLSP AWARDEES",
+    //   subtitle: "PLSP Awardees",
+    //   nominees: [
+    //     {
+    //       image: "/NOMINEES/PLSP/NOMINEE.png",
+    //       name: "COMPLETE NAME OF NOMINEE",
+    //       department: "Department/Office",
+    //     },
+    //   ],
+    // },
+  ];
+
   return (
     <>
       {/* HERO - BANNER */}
@@ -239,7 +364,7 @@ function App() {
             </div>
 
             {/* Card */}
-            <div className="flex flex-col items-center justify-center gap-5">
+            {/* <div className="flex flex-col items-center justify-center gap-5">
               <div className="w-[315px] md:w-[1000px] backdrop-blur-lg bg-white border border-gray-200 rounded-2xl shadow-md md:col-span-1 object-fill p-3 md:p-5">
                 <div className="mb-3">
                   <h4>MGA NOMINADO MULA SA JOB ORDER</h4>
@@ -288,6 +413,18 @@ function App() {
               <div className="w-[315px] md:w-[1000px] backdrop-blur-lg bg-white border border-gray-200 rounded-2xl shadow-md md:col-span-1 object-fill p-3">
                 MGA NOMINADO MULA SA PLSP Awardees
               </div>
+            </div> */}
+
+            {/* Cards */}
+            <div className="flex flex-col items-center justify-center gap-5">
+              {nomineeSections.map((section, index) => (
+                <NomineeSection
+                  key={index}
+                  title={section.title}
+                  subtitle={section.subtitle}
+                  nominees={section.nominees}
+                />
+              ))}
             </div>
           </div>
         </section>
