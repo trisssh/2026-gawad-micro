@@ -3,12 +3,14 @@ import heroImg from "./assets/hero.png";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
 import CountdownTimer from "./components/CountdownTimer";
+import NomineeCard from "./components/NomineeCard";
+import NomineeSection from "./components/NomineeSection";
 import "./App.css";
 
 function App() {
   ////////////////////YYYY-MM-DD-HH-MM-SS
-  const targetDate = "2026-09-25T09:00:00";
-  // const targetDate = "2026-09-04T17:00:00";
+  // const targetDate = "2026-09-25T09:00:00";
+  const targetDate = "2026-09-08T17:00:00";
 
   return (
     <>
@@ -73,7 +75,7 @@ function App() {
       {/* MAIN CONTENT */}
       <main>
         {/* ABOUT - DESCRIPTION SECTION */}
-        <section className="flex flex-col min-h-svh md:min-h-dyh items-center justify-center md:pt-6">
+        <section className="flex flex-col min-h-svh md:min-h-dvh items-center justify-center md:pt-6">
           <div>
             {/* ROUND BTN STYLE DATE */}
             <div className="grid justify-center mb-4">
@@ -207,6 +209,89 @@ function App() {
           </div>
         </section>
 
+        {/* NOMINEES SECTION*/}
+        <section className="flex flex-col min-h-svh md:min-h-dvh items-center justify-center md:pt-6">
+          <div>
+            {/* img - assest */}
+            <div className="flex justify-center items-center md:gap-3">
+              <img
+                src="NKPLSP.png"
+                className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-22 md:w-32"
+              />
+              <img
+                src="Trophy.png"
+                className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-25 md:w-40"
+              />
+              <img
+                src="126th PCSA logo (alternate 1).png"
+                className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-29 md:w-45"
+              />
+            </div>
+
+            {/* TITLE & TEXT */}
+            <div className="mb-8">
+              <h5 className="text-xs capitalize md:text-xl text-center px-3">
+                natatanging kawani ng pamahalaang panglungsod ng san pablo
+              </h5>
+              <h3 className="font-medium text-2xl md:text-4xl text-center">
+                MGA NOMINADO PARA SA MGA NATATANGING KAWANI 2025
+              </h3>
+            </div>
+
+            {/* Card */}
+            <div className="flex flex-col items-center justify-center gap-5">
+              <div className="w-[315px] md:w-[1000px] backdrop-blur-lg bg-white border border-gray-200 rounded-2xl shadow-md md:col-span-1 object-fill p-3 md:p-5">
+                <div className="mb-3">
+                  <h4>MGA NOMINADO MULA SA JOB ORDER</h4>
+                  <h6>6 Nominees from Job Order</h6>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div className="flex flex-row gap-3 backdrop-blur-lg bg-amber-100 border border-amber-100 rounded-md shadow-md md:col-span-1 object-fill p-3">
+                    <div>
+                      <img
+                        src="./NOMINEES/JOB ORDER/MEDINA.png"
+                        className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-12 md:w-20 bg-white border-2 border-ambe"
+                      />
+                    </div>
+                    <div className="flex flex-col justify-center items-left">
+                      <h4 className="font-semibold text-sm md:text-xl">
+                        COMPLETE NAME OF NOMINEE
+                      </h4>
+                      <h6 className="text-xs">Department/Office</h6>
+                    </div>
+                  </div>
+                  <div className="flex flex-row gap-3 backdrop-blur-lg bg-amber-100 border border-amber-100 rounded-md shadow-md md:col-span-1 object-fill p-3">
+                    <div>
+                      <img
+                        src="./NOMINEES/JOB ORDER/MIRAL.png"
+                        className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-12 md:w-20 bg-white border-2"
+                      />
+                    </div>
+                    <div className="flex flex-col justify-center items-left">
+                      <h4 className="font-semibold text-sm md:text-xl">
+                        COMPLETE NAME OF NOMINEE
+                      </h4>
+                      <h6 className="text-xs">Department/Office</h6>
+                    </div>
+                  </div>
+
+                  
+                </div>
+              </div>
+              <div className="w-[315px] md:w-[1000px] backdrop-blur-lg bg-white border border-gray-200 rounded-2xl shadow-md md:col-span-1 object-fill p-3">
+                MGA NOMINADO MULA SA 1ST LEVEL
+              </div>
+              <div className="w-[315px] md:w-[1000px] backdrop-blur-lg bg-white border border-gray-200 rounded-2xl shadow-md md:col-span-1 object-fill p-3">
+                MGA NOMINADO MULA SA 2ND LEVEL
+              </div>
+              <div className="w-[315px] md:w-[1000px] backdrop-blur-lg bg-white border border-gray-200 rounded-2xl shadow-md md:col-span-1 object-fill p-3">
+                MGA NOMINADO MULA SA PLSP Awardees
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CARD - LOYALTY AWARDEES */}
         <section className="bg-amber-100 p-6 rounded-lg shadow-lg m-12 md:m-20">
           <div className="flex flex-col items-center space-x-4">
@@ -261,6 +346,86 @@ function App() {
                   4 Employees awardee
                 </span>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* LOYALTY SECTION*/}
+        <section className="flex flex-col min-h-svh md:min-h-dvh items-center justify-center md:py-6">
+          <div>
+            {/* img - assest */}
+            <div className="flex justify-center items-center md:gap-3">
+              <img
+                src="25-logo.png"
+                className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-12 md:w-32"
+              />
+              <img
+                src="30-logo.png"
+                className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-12 md:w-32"
+              />
+              <img
+                src="Trophy.png"
+                className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-18 md:w-40"
+              />
+              <img
+                src="35-logo.png"
+                className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-12 md:w-32"
+              />
+              <img
+                src="40-logo.png"
+                className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-12 md:w-32"
+              />
+            </div>
+
+            {/* TITLE & TEXT */}
+            <div className="mb-8">
+              <h3 className="font-medium capitalize text-2xl md:text-4xl text-center px-3">
+                gawad parangal sa katapatan para sa paglilikuran 2025
+              </h3>
+              <h5 className="text-xs md:text-xl text-center px-3">
+                LOYALTY AWARDEES
+              </h5>
+            </div>
+
+            {/* Card */}
+            <div className="flex flex-col items-center justify-center gap-5">
+              <div className=" backdrop-blur-lg bg-white border border-amber-200 rounded-2xl shadow-md md:col-span-1 object-fill p-3 md:p-5">
+                <h4 className="text-sm md:text-xl font-bold text-amber-400  mb-3">
+                  25 YEARS LOYALTY AWARDEE
+                </h4>
+
+                {/* <h2 className="text-sm md:text-xl font-bold text-amber-400 filter drop-shadow-[0_0_1.5px_#D2AA0D] mb-3">
+                    25 YEARS LOYALTY AWARDEE
+                  </h2> */}
+
+                <div className="flex justify-center gap-3">
+                  <img
+                    src="./LOYALTY/25 YEARS/ABNER G. MANALO.png"
+                    className="w-65 backdrop-blur-lg bg-white border border-gray-200 rounded-md shadow-md md:col-span-1 object-fill"
+                  />
+                  <img
+                    src="./LOYALTY/25 YEARS/ABNER G. MANALO.png"
+                    className="w-65 backdrop-blur-lg bg-white border border-gray-200 rounded-md shadow-md md:col-span-1 object-fill"
+                  />
+                  <img
+                    src="./LOYALTY/25 YEARS/ABNER G. MANALO.png"
+                    className="w-65 backdrop-blur-lg bg-white border border-gray-200 rounded-md shadow-md md:col-span-1 object-fill"
+                  />
+                  <img
+                    src="./LOYALTY/25 YEARS/ABNER G. MANALO.png"
+                    className="w-65 backdrop-blur-lg bg-white border border-gray-200 rounded-md shadow-md md:col-span-1 object-fill"
+                  />
+                </div>
+              </div>
+              {/* <div className="w-[315px] md:w-[1000px] backdrop-blur-lg bg-white border border-gray-200 rounded-2xl shadow-md md:col-span-1 object-fill p-3">
+                30 YEARS LOYALTY AWARDEE
+              </div>
+              <div className="w-[315px] md:w-[1000px] backdrop-blur-lg bg-white border border-gray-200 rounded-2xl shadow-md md:col-span-1 object-fill p-3">
+                35 YEARS LOYALTY AWARDEE
+              </div>
+              <div className="w-[315px] md:w-[1000px] backdrop-blur-lg bg-white border border-gray-200 rounded-2xl shadow-md md:col-span-1 object-fill p-3">
+                40 YEARS LOYALTY AWARDEE
+              </div> */}
             </div>
           </div>
         </section>
