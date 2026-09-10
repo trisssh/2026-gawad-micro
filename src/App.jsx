@@ -5,6 +5,7 @@ import viteLogo from "./assets/vite.svg";
 import CountdownTimer from "./components/CountdownTimer";
 import NomineeCard from "./components/NomineeCard";
 import NomineeSection from "./components/NomineeSection";
+import AwardeeCarousel from "./components/AwardeeCarousel";
 import "./App.css";
 
 function App() {
@@ -136,6 +137,232 @@ function App() {
     //   ],
     // },
   ];
+
+
+  const loyalty25 = [
+    {
+      image: "./LOYALTY/25 YEARS/ABNER G. MANALO.png",
+      alt: "ABNER G. MANALO",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/ARLENE B. BUNQUIN.png",
+      alt: "ARLENE B. BUNQUIN",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/ARNOLD E. BELEN.png",
+      alt: "ARNOLD E. BELEN",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/ARVIN S. PASCO.png",
+      alt: "ARVIN S. PASCO",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/BERNARD D. MONFERO.png",
+      alt: "BERNARD D. MONFERO",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/CHANITA L. VILLONES.png",
+      alt: "CHANITA L. VILLONES",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/DENNIS H. BECINA.png",
+      alt: "DENNIS H. BECINA",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/EDNA A. DANGUE.png",
+      alt: "EDNA A. DANGUE",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/ELVIN A. EMPEMANO.png",
+      alt: "ELVIN A. EMPEMANO",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/ERIC C. DE GUZMAN.png",
+      alt: "ERIC C. DE GUZMAN",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/HILARIO N. BELEN.png",
+      alt: "HILARIO N. BELEN",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/JENET G. LLEGO.png",
+      alt: "JENET G. LLEGO",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/JONATHAN D. PAPA.png",
+      alt: "JONATHAN D. PAPA",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/JUDELYN D. GUTIERREZ.png",
+      alt: "JUDELYN D. GUTIERREZ",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/JOSELITO S. REYES.png",
+      alt: "JOSELITO S. REYES",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/KRISTOFFER JOHN A. SUI.png",
+      alt: "KRISTOFFER JOHN A. SUI",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/LOIDA U. ENRIQUEZ.png",
+      alt: "LOIDA U. ENRIQUEZ",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/LUCAS OMAR E. COSICO.png",
+      alt: "LUCAS OMAR E. COSICO",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/LUZVIMINDA B. BANDIAN.png",
+      alt: "LUZVIMINDA B. BANDIAN",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/MA. CORAZON MARYQUEEN O. GUERRERO.png",
+      alt: "MA. CORAZON MARYQUEEN O. GUERRERO",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/MAIDA A. BONDAD.png",
+      alt: "MAIDA A. BONDAD",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/MARIA LINDA B. RIVERA.png",
+      alt: "MARIA LINDA B. RIVERA",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/MARIA SOLEDAD G. DIANGKINAY.png",
+      alt: "MARIA SOLEDAD G. DIANGKINAY",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/MARIANNE D. ESCALONA.png",
+      alt: "MARIANNE D. ESCALONA",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/MARIVETH R. BRION.png",
+      alt: "MARIVETH R. BRION",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/MARLON R. MAGNO.png",
+      alt: "MARLON R. MAGNO",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/MELVIN A. MAGNO.png",
+      alt: "MELVIN A. MAGNO",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/MYLENE B. LANGIT.png",
+      alt: "MYLENE B. LANGIT",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/NEDILEN D. BELTIJAR.png",
+      alt: "NEDILEN D. BETIJAR",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/NORA A. DEVANADERA.png",
+      alt: "NORA A. DEVANADERA",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/NAZARIA A. MARASIGAN.png",
+      alt: "NAZARIA A. MARASIGAN",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/PLACIDO E. ATIENZA.png",
+      alt: "PLACIDO E. ATIENZA",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/ROBERTO G. BACAY.png",
+      alt: "ROBERTO G. BACAY",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/ROMEO O. MIRANDA.png",
+      alt: "ROMEO O. MIRANDA",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/RONALDO A. PUHAWAN.png",
+      alt: "RONALDO A. PUHAWAN",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/RONALDO E. CAPISTRANO.png",
+      alt: "RONALDO E. CAPISTRANO",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/VIVIAN C. DE GUZMAN.png",
+      alt: "VIVIAN C. DE GUZMAN",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/VICTORIA G. MALOLES.png",
+      alt: "VICTORIA G. MALOLES",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/XENIA D. DEOMANO - ADAJAR.png",
+      alt: "XENIA D. DEOMANO - ADAJAR",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/LOIDA U. ENRIQUEZ.png",
+      alt: "LOIDA U. ENRIQUEZ",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/GERALD C. MANALO.png",
+      alt: "GERALD C. MANALO",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/LEOVINO R. EXCONDE.png",
+      alt: "LEOVINO R. EXCONDE",
+    },
+    {
+      image: "./LOYALTY/25 YEARS/NORA A. DEVANADERA.png",
+      alt: "NORA A. DEVANADERA",
+    },
+  ];
+
+
+  const loyalty30 = [
+    {
+      image: "./LOYALTY/30 YEARS/BERT A. DELA PENA.png",
+      alt: "BERT A. DELA PENA",
+    },
+    {
+      image: "./LOYALTY/30 YEARS/CHARITO C. PANOL.png",
+      alt: "CHARITO C. PANOL",
+    },
+    { image: "./LOYALTY/30 YEARS/DENNIS A. RAMOS.png", alt: "DENNIS A. RAMOS" },
+    {
+      image: "./LOYALTY/30 YEARS/EDGAR C. VIBANDOR.png",
+      alt: "EDGAR C. VIBANDOR",
+    },
+    {
+      image: "./LOYALTY/30 YEARS/ELIZER B. ALIMON.png",
+      alt: "ELIZER B. ALIMON",
+    },
+    {
+      image: "./LOYALTY/30 YEARS/EPIFANIO R. BAGONA.png",
+      alt: "EPIFANIO R. BAGONA",
+    },
+    {
+      image: "./LOYALTY/30 YEARS/MARIA REYLINDA Q. SY.png",
+      alt: "MARIA REYLINDA Q. SY",
+    },
+    {
+      image: "./LOYALTY/30 YEARS/MARY MAY A. VILLANUEVA.png",
+      alt: "MARY MAY A. VILLANUEVA",
+    },
+    {
+      image: "./LOYALTY/30 YEARS/NANCY Q. VIDAL.png",
+      alt: "NANCY Q. VIDAL",
+    },
+    {
+      image: "./LOYALTY/30 YEARS/NESTOR R. BAGONA.png",
+      alt: "NESTOR R. BAGONA",
+    },
+    {
+      image: "./LOYALTY/30 YEARS/OSCAR B. EMRALINO.png",
+      alt: "OSCAR B. EMRALINO",
+    },
+    {
+      image: "./LOYALTY/30 YEARS/SUSANA B. BELARMINO.png",
+      alt: "SUSANA B. BELARMINO",
+    },
+  ];
+
 
   return (
     <>
@@ -524,8 +751,29 @@ function App() {
               </h5>
             </div>
 
+            {/* FRAME OF CARDS PER YEARS */}
             <div className="w-full max-w-6xl mx-auto p-4 md:p-6 space-y-8">
-              {/* 35 Awardee Category Section */}
+              {/* 25 Years Awardee — carousel for 42 items */}
+              <div className="backdrop-blur-xl bg-white/80 border border-amber-200/60 rounded-3xl p-6 md:p-8 shadow-xl shadow-amber-500/5">
+                <div className="flex items-center gap-3 mb-6 pb-4 border-b border-amber-100">
+                  <h3 className="text-lg md:text-2xl font-extrabold tracking-wide text-amber-600 uppercase">
+                    25 Years Loyalty Awardees
+                  </h3>
+                </div>
+                <AwardeeCarousel items={loyalty25} />
+              </div>
+
+              {/* 30 Years Awardee — carousel for 13 items */}
+              <div className="backdrop-blur-xl bg-white/80 border border-amber-200/60 rounded-3xl p-6 md:p-8 shadow-xl shadow-amber-500/5">
+                <div className="flex items-center gap-3 mb-6 pb-4 border-b border-amber-100">
+                  <h3 className="text-lg md:text-2xl font-extrabold tracking-wide text-amber-600 uppercase">
+                    30 Years Loyalty Awardees
+                  </h3>
+                </div>
+                <AwardeeCarousel items={loyalty30} />
+              </div>
+
+              {/* 35 Years Awardee Category Section */}
               <div className="backdrop-blur-xl bg-white/80 border border-amber-200/60 rounded-3xl p-6 md:p-8 shadow-xl shadow-amber-500/5">
                 {/* Section Header */}
                 <div className="flex items-center gap-3 mb-6 pb-4 border-b border-amber-100">
@@ -575,7 +823,7 @@ function App() {
                 </div>
               </div>
 
-              {/* 40 Awardee Category Section */}
+              {/* 40 Years Awardee Category Section */}
               <div className="backdrop-blur-xl bg-white/80 border border-amber-200/60 rounded-3xl p-6 md:p-8 shadow-xl shadow-amber-500/5">
                 {/* Section Header */}
                 <div className="flex items-center gap-3 mb-6 pb-4 border-b border-amber-100">
