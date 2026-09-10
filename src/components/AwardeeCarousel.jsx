@@ -1,6 +1,6 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useRef, useCallback } from "react";
 
-// Hinahati ang array into chunks (default 4 per page, matching lg:grid-cols-4)
+// Array into chunks (default 4 per page)
 function chunkArray(arr, size) {
   const chunks = [];
   for (let i = 0; i < arr.length; i += size) {
@@ -23,22 +23,61 @@ function AwardeeCard({ image, alt }) {
   );
 }
 
-export default function AwardeeCarousel({ items, itemsPerPage = 4 }) {
+
+
+  export default function AwardeeCarousel({
+  items,
+  itemsPerPage = 4,
+  autoPlay = true,
+  intervalMs = 5000,
+}) {
   const [pageIndex, setPageIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const intervalRef = useRef(null);
 
   const pages = useMemo(
     () => chunkArray(items, itemsPerPage),
-    [items, itemsPerPage],
+    [items, itemsPerPage]
   );
 
   const totalPages = pages.length;
   const isSinglePage = totalPages <= 1;
 
-  const goPrev = () => setPageIndex((i) => (i === 0 ? totalPages - 1 : i - 1));
-  const goNext = () => setPageIndex((i) => (i === totalPages - 1 ? 0 : i + 1));
+  const goPrev = useCallback(() => {
+    setPageIndex((i) => (i === 0 ? totalPages - 1 : i - 1));
+  }, [totalPages]);
+
+  const goNext = useCallback(() => {
+    setPageIndex((i) => (i === totalPages - 1 ? 0 : i + 1));
+  }, [totalPages]);
+
+  // Autoplay logic
+  useEffect(() => {
+    if (!autoPlay || isSinglePage || isPaused) return;
+
+    intervalRef.current = setInterval(() => {
+      goNext();
+    }, intervalMs);
+
+    return () => clearInterval(intervalRef.current);
+  }, [autoPlay, isSinglePage, isPaused, intervalMs, goNext]);
+
+  // Manual navigation
+  const handleManualNav = (action) => {
+    action();
+    setIsPaused(true);
+    clearInterval(intervalRef.current);
+
+    // autoplay continue
+    setTimeout(() => setIsPaused(false), intervalMs);
+  };
 
   return (
-    <div className="relative">
+    <div
+      className="relative"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       {/* Sliding track */}
       <div className="overflow-hidden">
         <div
@@ -57,11 +96,11 @@ export default function AwardeeCarousel({ items, itemsPerPage = 4 }) {
         </div>
       </div>
 
-      {/* Prev / Next arrows — di lumalabas kung 1 page lang */}
+      {/* Prev / Next arrows */}
       {!isSinglePage && (
         <>
           <button
-            onClick={goPrev}
+            onClick={() => handleManualNav(goPrev)}
             aria-label="Previous"
             className="absolute -left-3 md:-left-5 top-1/2 -translate-y-1/2
                        w-9 h-9 md:w-10 md:h-10 rounded-full bg-white border border-amber-200
@@ -69,22 +108,13 @@ export default function AwardeeCarousel({ items, itemsPerPage = 4 }) {
                        text-amber-600 hover:bg-amber-500 hover:text-white
                        transition-colors duration-200 z-10"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-5 h-5"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M15 18l-6-6 6-6" />
             </svg>
           </button>
 
           <button
-            onClick={goNext}
+            onClick={() => handleManualNav(goNext)}
             aria-label="Next"
             className="absolute -right-3 md:-right-5 top-1/2 -translate-y-1/2
                        w-9 h-9 md:w-10 md:h-10 rounded-full bg-white border border-amber-200
@@ -92,16 +122,7 @@ export default function AwardeeCarousel({ items, itemsPerPage = 4 }) {
                        text-amber-600 hover:bg-amber-500 hover:text-white
                        transition-colors duration-200 z-10"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-5 h-5"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M9 18l6-6-6-6" />
             </svg>
           </button>
@@ -114,7 +135,7 @@ export default function AwardeeCarousel({ items, itemsPerPage = 4 }) {
           {pages.map((_, i) => (
             <button
               key={i}
-              onClick={() => setPageIndex(i)}
+              onClick={() => handleManualNav(() => setPageIndex(i))}
               aria-label={`Go to page ${i + 1}`}
               className={`h-2 rounded-full transition-all duration-300 ${
                 i === pageIndex
@@ -126,7 +147,7 @@ export default function AwardeeCarousel({ items, itemsPerPage = 4 }) {
         </div>
       )}
 
-      {/* Page counter (optional, useful for 42 items) */}
+      {/* Page counter */}
       {!isSinglePage && (
         <p className="text-center text-xs text-gray-400 mt-2">
           {pageIndex + 1} / {totalPages}
@@ -135,3 +156,4 @@ export default function AwardeeCarousel({ items, itemsPerPage = 4 }) {
     </div>
   );
 }
+

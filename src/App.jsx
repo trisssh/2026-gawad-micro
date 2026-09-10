@@ -760,7 +760,7 @@ function App() {
                     25 Years Loyalty Awardees
                   </h3>
                 </div>
-                <AwardeeCarousel items={loyalty25} />
+                <AwardeeCarousel items={loyalty25} intervalMs={3000} />
               </div>
 
               {/* 30 Years Awardee — carousel for 13 items */}
@@ -770,7 +770,7 @@ function App() {
                     30 Years Loyalty Awardees
                   </h3>
                 </div>
-                <AwardeeCarousel items={loyalty30} />
+                <AwardeeCarousel items={loyalty30} intervalMs={3000} />
               </div>
 
               {/* 35 Years Awardee Category Section */}
