@@ -10,7 +10,7 @@ import "./App.css";
 function App() {
   ////////////////////YYYY-MM-DD-HH-MM-SS
   // const targetDate = "2026-09-25T09:00:00";
-  const targetDate = "2026-09-08T17:00:00";
+  const targetDate = "2026-09-10T17:00:00";
 
   const nomineeSections = [
     {
@@ -524,45 +524,106 @@ function App() {
               </h5>
             </div>
 
-            {/* Card */}
-            <div className="flex flex-col items-center justify-center gap-5">
-              <div className=" backdrop-blur-lg bg-white border border-amber-200 rounded-2xl shadow-md md:col-span-1 object-fill p-3 md:p-5">
-                <h4 className="text-sm md:text-xl font-bold text-amber-400  mb-3">
-                  25 YEARS LOYALTY AWARDEE
-                </h4>
+            <div className="w-full max-w-6xl mx-auto p-4 md:p-6 space-y-8">
+              {/* 35 Awardee Category Section */}
+              <div className="backdrop-blur-xl bg-white/80 border border-amber-200/60 rounded-3xl p-6 md:p-8 shadow-xl shadow-amber-500/5">
+                {/* Section Header */}
+                <div className="flex items-center gap-3 mb-6 pb-4 border-b border-amber-100">
+                  <h3 className="text-lg md:text-2xl font-extrabold tracking-wide text-amber-600 uppercase">
+                    35 Years Loyalty Awardees
+                  </h3>
+                </div>
 
-                {/* <h2 className="text-sm md:text-xl font-bold text-amber-400 filter drop-shadow-[0_0_1.5px_#D2AA0D] mb-3">
-                    25 YEARS LOYALTY AWARDEE
-                  </h2> */}
-
-                <div className="flex justify-center gap-3">
-                  <img
-                    src="./LOYALTY/25 YEARS/ABNER G. MANALO.png"
-                    className="w-65 backdrop-blur-lg bg-white border border-gray-200 rounded-md shadow-md md:col-span-1 object-fill"
-                  />
-                  <img
-                    src="./LOYALTY/25 YEARS/ABNER G. MANALO.png"
-                    className="w-65 backdrop-blur-lg bg-white border border-gray-200 rounded-md shadow-md md:col-span-1 object-fill"
-                  />
-                  <img
-                    src="./LOYALTY/25 YEARS/ABNER G. MANALO.png"
-                    className="w-65 backdrop-blur-lg bg-white border border-gray-200 rounded-md shadow-md md:col-span-1 object-fill"
-                  />
-                  <img
-                    src="./LOYALTY/25 YEARS/ABNER G. MANALO.png"
-                    className="w-65 backdrop-blur-lg bg-white border border-gray-200 rounded-md shadow-md md:col-span-1 object-fill"
-                  />
+                {/* Responsive Image Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div className="group relative overflow-hidden rounded-xl border border-amber-100/80 bg-white p-2 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-amber-300">
+                    <div className="overflow-hidden rounded-lg">
+                      <img
+                        src="./LOYALTY/35 YEARS/JORCEL C. SAN PEDRO.png"
+                        alt="JORCEL C. SAN PEDRO"
+                        className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  </div>
+                  <div className="group relative overflow-hidden rounded-xl border border-amber-100/80 bg-white p-2 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-amber-300">
+                    <div className="overflow-hidden rounded-lg">
+                      <img
+                        src="./LOYALTY/35 YEARS/NANCY C. TUBIGAN.png"
+                        alt="NANCY C. TUBIGAN"
+                        className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  </div>
+                  <div className="group relative overflow-hidden rounded-xl border border-amber-100/80 bg-white p-2 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-amber-300">
+                    <div className="overflow-hidden rounded-lg">
+                      <img
+                        src="./LOYALTY/35 YEARS/ALEXANDER M. BAUTISTA.png"
+                        alt="ALEXANDER M. BAUTISTA"
+                        className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  </div>
+                  <div className="group relative overflow-hidden rounded-xl border border-amber-100/80 bg-white p-2 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-amber-300">
+                    <div className="overflow-hidden rounded-lg">
+                      <img
+                        src="./LOYALTY/35 YEARS/RONALD D. OBNIAL.png"
+                        alt="RONALD D. OBNIAL"
+                        className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
-              {/* <div className="w-[315px] md:w-[1000px] backdrop-blur-lg bg-white border border-gray-200 rounded-2xl shadow-md md:col-span-1 object-fill p-3">
-                30 YEARS LOYALTY AWARDEE
+
+              {/* 40 Awardee Category Section */}
+              <div className="backdrop-blur-xl bg-white/80 border border-amber-200/60 rounded-3xl p-6 md:p-8 shadow-xl shadow-amber-500/5">
+                {/* Section Header */}
+                <div className="flex items-center gap-3 mb-6 pb-4 border-b border-amber-100">
+                  <h3 className="text-lg md:text-2xl font-extrabold tracking-wide text-amber-600 uppercase">
+                    40 Years Loyalty Awardees
+                  </h3>
+                </div>
+
+                {/* Responsive Image Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div className="group relative overflow-hidden rounded-xl border border-amber-100/80 bg-white p-2 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-amber-300">
+                    <div className="overflow-hidden rounded-lg">
+                      <img
+                        src="./LOYALTY/40 YEARS/LUCIO GERALDO G. CIOLO.png"
+                        alt="LUCIO GERALDO G. CIOLO"
+                        className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  </div>
+                  <div className="group relative overflow-hidden rounded-xl border border-amber-100/80 bg-white p-2 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-amber-300">
+                    <div className="overflow-hidden rounded-lg">
+                      <img
+                        src="./LOYALTY/40 YEARS/GENELYN B. CIOLO.png"
+                        alt="GENELYN B. CIOLO"
+                        className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  </div>
+                  <div className="group relative overflow-hidden rounded-xl border border-amber-100/80 bg-white p-2 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-amber-300">
+                    <div className="overflow-hidden rounded-lg">
+                      <img
+                        src="./LOYALTY/40 YEARS/ELENA P. IGNACIO.png"
+                        alt="ELENA P. IGNACIO"
+                        className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  </div>
+                  <div className="group relative overflow-hidden rounded-xl border border-amber-100/80 bg-white p-2 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-amber-300">
+                    <div className="overflow-hidden rounded-lg">
+                      <img
+                        src="./LOYALTY/40 YEARS/CORAZON T. CAPUNO.png"
+                        alt="CORAZON T. CAPUNO"
+                        className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="w-[315px] md:w-[1000px] backdrop-blur-lg bg-white border border-gray-200 rounded-2xl shadow-md md:col-span-1 object-fill p-3">
-                35 YEARS LOYALTY AWARDEE
-              </div>
-              <div className="w-[315px] md:w-[1000px] backdrop-blur-lg bg-white border border-gray-200 rounded-2xl shadow-md md:col-span-1 object-fill p-3">
-                40 YEARS LOYALTY AWARDEE
-              </div> */}
             </div>
           </div>
         </section>
