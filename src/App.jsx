@@ -10,8 +10,8 @@ import "./App.css";
 
 function App() {
   ////////////////////YYYY-MM-DD-HH-MM-SS
-  // const targetDate = "2026-09-25T09:00:00";
-  const targetDate = "2026-09-10T17:00:00";
+  const targetDate = "2026-09-25T09:00:00";
+  // const targetDate = "2026-09-10T17:00:00";
 
   const nomineeSections = [
     {
@@ -368,7 +368,7 @@ function App() {
     <>
       {/* HERO - BANNER */}
       {/* <section className="relative min-h-screen overflow-hidden bg-gradient-to-b from-neutral-950 via-black to-neutral-900"> */}
-      <section className="relative h-[60vh] md:h-[82vh] overflow-hidden bg-gradient-to-b from-neutral-950 via-black to-neutral-900">
+      <section className="relative min-h-screen overflow-hidden bg-gradient-to-b from-neutral-950 via-black to-neutral-900 flex flex-col">
         {/* Ambient gold glows */}
         <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-amber-400/20 blur-3xl" />
         <div className="absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-amber-500/10 blur-3xl" />
@@ -376,52 +376,88 @@ function App() {
         {/* Subtle radial spotlight behind title */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(210,170,13,0.08)_0%,_transparent_60%)]" />
 
-        {/* SPC Logo and Bagong PH */}
-        <div className="flex items-center justify-between px-6 py-3">
-          <img
-            src="spclogo.png"
-            className="bg-white mx-1 filter drop-shadow-[0_0_0.25rem_#D2AA0D] rounded-full w-12 h-12 md:w-17 md:h-17 zoom"
-          />
-          <img
-            src="Bagong-PH.png"
-            className=" mx-1 filter drop-shadow-[0_0_0.25rem_#D2AA0D] w-14 h-14 md:w-20 md:h-20 zoom"
-          />
-        </div>
+        {/* Vortex flourish */}
+        {/* <img
+          src="vortex gold.png"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none select-none absolute -right-20 md:-right-10 top-0 h-[70vh] md:h-[95vh]
+               opacity-[0.10] object-contain hidden sm:block"
+        /> */}
+
+        {/* Coconut/leaf pattern */}
+        <img
+          src="COCONUT GOLD.png"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none select-none absolute left-4 md:left-10 top-1/2 -translate-y-1/2
+               h-[55vh] md:h-[68vh] opacity-[0.18] object-contain hidden lg:block"
+        />
+        <img
+          src="COCONUT GOLD.png"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none select-none absolute right-4 md:right-10 top-1/2 -translate-y-1/2
+               h-[55vh] md:h-[68vh] opacity-[0.18] object-contain hidden lg:block -scale-x-100"
+        />
 
         {/* Faint grid/texture overlay */}
-        <div
+        {/* <div
           className="absolute inset-0 opacity-[0.04]"
           style={{
             backgroundImage:
               "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)",
             backgroundSize: "40px 40px",
           }}
-        />
+        /> */}
 
         {/* Bottom fade to blend into next section */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black to-transparent" />
 
-        {/* Title */}
-        <div className="relative z-10 px-8 pt-12 md:pt-16 text-center">
-          <p className="text-amber-400/80 text-[8px] md:text-sm font-semibold tracking-[0.3em] mb-3">
+        {/* SPC Logo and Bagong PH */}
+        <div className="relative z-10 flex items-center justify-between px-6 py-4 md:px-10 md:py-6">
+          <img
+            src="spclogo.png"
+            alt="San Pablo City Logo"
+            className="bg-white filter drop-shadow-[0_0_0.25rem_#D2AA0D] rounded-full w-12 h-12 md:w-16 md:h-16
+                 transition-transform duration-300 hover:scale-110"
+          />
+          <img
+            src="Bagong-PH.png"
+            alt="Bagong Pilipinas Logo"
+            className="filter drop-shadow-[0_0_0.25rem_#D2AA0D] w-14 h-14 md:w-20 md:h-20
+                 transition-transform duration-300 hover:scale-110"
+          />
+        </div>
+
+        {/* Main content — centered, fills remaining space */}
+        <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 text-center">
+          <p className="text-white text-[8px] md:text-sm font-semibold tracking-[0.3em] mb-3">
+          {/* <p className="text-amber-400/80 text-[8px] md:text-sm font-semibold tracking-[0.3em] mb-3"> */}
             CITY GOVERNMENT OF SAN PABLO PRESENTS
           </p>
+
           <h1 className="text-4xl md:text-8xl font-bold pb-4 bg-gradient-to-b from-amber-300 via-amber-400 to-amber-600 bg-clip-text text-transparent drop-shadow-[0_2px_20px_rgba(210,170,13,0.35)]">
             Gawad Parangal 2026
           </h1>
-          <div className="mx-auto mt-3 mb-4 h-px w-24 bg-gradient-to-r from-transparent via-amber-400 to-transparent" />
-        </div>
 
-        {/* Countdown */}
-        <div className="relative z-10 mt-8 md:mt-10">
+          <div className="mx-auto mt-1 mb-6 flex items-center gap-3">
+            <span className="h-px w-12 bg-gradient-to-r from-transparent to-amber-400" />
+            <span className="h-1.5 w-1.5 rotate-45 bg-amber-400" />
+            <span className="h-px w-12 bg-gradient-to-l from-transparent to-amber-400" />
+          </div>
+
           <CountdownTimer targetDate={targetDate} />
-          <p className="text-gray-200 text-md md:text-3xl text-center py-4 font-light tracking-wide">
+
+          <p className="text-gray-200 text-md md:text-3xl text-center pt-6 font-light tracking-wide">
             Live on{" "}
             <span className="text-amber-400 font-semibold">
               September 25, 2026
             </span>
           </p>
         </div>
+
+      
       </section>
 
       {/* MAIN CONTENT */}
