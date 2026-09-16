@@ -11,7 +11,7 @@ import "./App.css";
 function App() {
   ////////////////////YYYY-MM-DD-HH-MM-SS
   const targetDate = "2026-09-25T09:00:00";
-  // const targetDate = "2026-09-10T17:00:00";
+  // const targetDate = "2026-09-16T17:00:00";
 
   const nomineeSections = [
     {
@@ -137,7 +137,6 @@ function App() {
     //   ],
     // },
   ];
-
 
   const loyalty25 = [
     {
@@ -314,7 +313,6 @@ function App() {
     },
   ];
 
-
   const loyalty30 = [
     {
       image: "./LOYALTY/30 YEARS/BERT A. DELA PENA.png",
@@ -363,11 +361,9 @@ function App() {
     },
   ];
 
-
   return (
     <>
       {/* HERO - BANNER */}
-      {/* <section className="relative min-h-screen overflow-hidden bg-gradient-to-b from-neutral-950 via-black to-neutral-900"> */}
       <section className="relative min-h-screen overflow-hidden bg-gradient-to-b from-neutral-950 via-black to-neutral-900 flex flex-col">
         {/* Ambient gold glows */}
         <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-amber-400/20 blur-3xl" />
@@ -381,8 +377,15 @@ function App() {
           src="vortex gold.png"
           alt=""
           aria-hidden="true"
-          className="pointer-events-none select-none absolute -right-20 md:-right-10 top-0 h-[70vh] md:h-[95vh]
-               opacity-[0.10] object-contain hidden sm:block"
+          className="pointer-events-none select-none absolute -left-20 md:-right-15 top-0 h-[70vh] md:h-screen
+               opacity-[0.5] object-contain hidden sm:block"
+        />
+        <img
+          src="vortex gold.png"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none select-none absolute -right-20 md:-right-15 top-0 h-[70vh] md:h-screen
+               opacity-[0.5] object-contain hidden sm:block"
         /> */}
 
         {/* Coconut/leaf pattern */}
@@ -391,25 +394,25 @@ function App() {
           alt=""
           aria-hidden="true"
           className="pointer-events-none select-none absolute left-4 md:left-10 top-1/2 -translate-y-1/2
-               h-[55vh] md:h-[68vh] opacity-[0.18] object-contain hidden lg:block"
+               h-[55vh] md:h-[68vh] opacity-[0.20] object-contain hidden lg:block"
         />
         <img
           src="COCONUT GOLD.png"
           alt=""
           aria-hidden="true"
           className="pointer-events-none select-none absolute right-4 md:right-10 top-1/2 -translate-y-1/2
-               h-[55vh] md:h-[68vh] opacity-[0.18] object-contain hidden lg:block -scale-x-100"
+               h-[55vh] md:h-[68vh] opacity-[0.20] object-contain hidden lg:block -scale-x-100"
         />
 
         {/* Faint grid/texture overlay */}
-        {/* <div
+        <div
           className="absolute inset-0 opacity-[0.04]"
           style={{
             backgroundImage:
               "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)",
             backgroundSize: "40px 40px",
           }}
-        /> */}
+        />
 
         {/* Bottom fade to blend into next section */}
         <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black to-transparent" />
@@ -433,7 +436,7 @@ function App() {
         {/* Main content — centered, fills remaining space */}
         <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 text-center">
           <p className="text-white text-[8px] md:text-sm font-semibold tracking-[0.3em] mb-3">
-          {/* <p className="text-amber-400/80 text-[8px] md:text-sm font-semibold tracking-[0.3em] mb-3"> */}
+            {/* <p className="text-amber-400/80 text-[8px] md:text-sm font-semibold tracking-[0.3em] mb-3"> */}
             CITY GOVERNMENT OF SAN PABLO PRESENTS
           </p>
 
@@ -456,8 +459,6 @@ function App() {
             </span>
           </p>
         </div>
-
-      
       </section>
 
       {/* MAIN CONTENT */}
@@ -474,11 +475,11 @@ function App() {
 
             {/* TITLE & TEXT */}
             <div className="mb-8">
-              <h3 className="font-medium text-2xl md:text-4xl text-center">
-                Lorem ipsum dolor sit amet
+              <h3 className="font-medium text-3xl md:text-5xl text-center uppercase">
+                Gawad Parangal
               </h3>
               <h5 className="text-sm md:text-xl text-center">
-                Lorem ipsum dolor sit amet consectetur
+                Pamahalaan ng Lungsod ng San Pablo
               </h5>
             </div>
 
@@ -625,58 +626,6 @@ function App() {
                 MGA NOMINADO PARA SA MGA NATATANGING KAWANI 2025
               </h3>
             </div>
-
-            {/* Card */}
-            {/* <div className="flex flex-col items-center justify-center gap-5">
-              <div className="w-[315px] md:w-[1000px] backdrop-blur-lg bg-white border border-gray-200 rounded-2xl shadow-md md:col-span-1 object-fill p-3 md:p-5">
-                <div className="mb-3">
-                  <h4>MGA NOMINADO MULA SA JOB ORDER</h4>
-                  <h6>6 Nominees from Job Order</h6>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <div className="flex flex-row gap-3 backdrop-blur-lg bg-amber-100 border border-amber-100 rounded-md shadow-md md:col-span-1 object-fill p-3">
-                    <div>
-                      <img
-                        src="./NOMINEES/JOB ORDER/MEDINA.png"
-                        className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-12 md:w-20 bg-white border-2 border-ambe"
-                      />
-                    </div>
-                    <div className="flex flex-col justify-center items-left">
-                      <h4 className="font-semibold text-sm md:text-xl">
-                        COMPLETE NAME OF NOMINEE
-                      </h4>
-                      <h6 className="text-xs">Department/Office</h6>
-                    </div>
-                  </div>
-                  <div className="flex flex-row gap-3 backdrop-blur-lg bg-amber-100 border border-amber-100 rounded-md shadow-md md:col-span-1 object-fill p-3">
-                    <div>
-                      <img
-                        src="./NOMINEES/JOB ORDER/MIRAL.png"
-                        className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-12 md:w-20 bg-white border-2"
-                      />
-                    </div>
-                    <div className="flex flex-col justify-center items-left">
-                      <h4 className="font-semibold text-sm md:text-xl">
-                        COMPLETE NAME OF NOMINEE
-                      </h4>
-                      <h6 className="text-xs">Department/Office</h6>
-                    </div>
-                  </div>
-
-                  
-                </div>
-              </div>
-              <div className="w-[315px] md:w-[1000px] backdrop-blur-lg bg-white border border-gray-200 rounded-2xl shadow-md md:col-span-1 object-fill p-3">
-                MGA NOMINADO MULA SA 1ST LEVEL
-              </div>
-              <div className="w-[315px] md:w-[1000px] backdrop-blur-lg bg-white border border-gray-200 rounded-2xl shadow-md md:col-span-1 object-fill p-3">
-                MGA NOMINADO MULA SA 2ND LEVEL
-              </div>
-              <div className="w-[315px] md:w-[1000px] backdrop-blur-lg bg-white border border-gray-200 rounded-2xl shadow-md md:col-span-1 object-fill p-3">
-                MGA NOMINADO MULA SA PLSP Awardees
-              </div>
-            </div> */}
 
             {/* Cards */}
             <div className="flex flex-col items-center justify-center gap-5">
