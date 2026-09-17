@@ -599,7 +599,7 @@ function App() {
         </section>
 
         {/* NOMINEES SECTION*/}
-        <section className="flex flex-col min-h-svh md:min-h-dvh items-center justify-center m-6 md:pt-6 md:mb-6">
+        <section className="flex flex-col min-h-svh md:min-h-dvh items-center justify-center m-6 md:py-6 md:mb-6">
           <div>
             {/* img - assest */}
             <div className="flex justify-center items-center md:gap-3">
@@ -830,7 +830,7 @@ function App() {
         </section>
 
         {/* CARD - LOYALTY AWARDEES */}
-        <section className="bg-gradient-to-tr from-yellow-300 via-amber-400 to-yellow-700 pt-6 rounded-lg shadow-lg m-6 md:m-20">
+        <section className="bg-gradient-to-tr from-yellow-300 via-amber-400 to-yellow-700 py-6 rounded-lg shadow-lg m-6 md:m-20">
           <div className="flex flex-col items-center space-x-4">
             <div className="text-center mb-6">
               <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-100 text-center">
