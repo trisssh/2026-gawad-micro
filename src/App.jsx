@@ -464,8 +464,8 @@ function App() {
       {/* MAIN CONTENT */}
       <main>
         {/* ABOUT - DESCRIPTION SECTION */}
-        <section className="flex flex-col min-h-svh md:min-h-dvh items-center justify-center md:pt-6">
-          <div>
+        <section className="flex flex-col min-h-svh md:min-h-dvh items-center justify-center">
+          <div className="mb-4">
             {/* ROUND BTN STYLE DATE */}
             <div className="grid justify-center mb-4">
               <span className="inline-block px-5 py-1 rounded-full text-base text-gray-700 transition bg-white shadow-md border border-gray-100 font-mono font-semibold">
@@ -474,7 +474,7 @@ function App() {
             </div>
 
             {/* TITLE & TEXT */}
-            <div className="mb-8">
+            <div className="mb-4">
               <h3 className="font-medium text-3xl md:text-5xl text-center uppercase">
                 Gawad Parangal
               </h3>
@@ -503,7 +503,7 @@ function App() {
           </div>
 
           {/* Circle Logo */}
-          <div className="flex flex-row items-center justify-center py-6">
+          <div className="flex flex-row items-center justify-center py-4">
             <span>
               <hr className="w-30 md:w-50 lg:w-110 text-[#D2AA0D]  filter drop-shadow-[0_0_0.25rem_#D2AA0D]"></hr>
             </span>
