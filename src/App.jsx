@@ -479,7 +479,7 @@ function App() {
                 Gawad Parangal
               </h3>
               <h5 className="text-sm md:text-xl text-center">
-                Pamahalaan ng Lungsod ng San Pablo
+                Pamahalaang Lungsod ng San Pablo
               </h5>
             </div>
 
@@ -599,7 +599,7 @@ function App() {
         </section>
 
         {/* NOMINEES SECTION*/}
-        <section className="flex flex-col min-h-svh md:min-h-dvh items-center justify-center md:pt-6">
+        <section className="flex flex-col min-h-svh md:min-h-dvh items-center justify-center m-6 md:pt-6 md:mb-6">
           <div>
             {/* img - assest */}
             <div className="flex justify-center items-center md:gap-3">
@@ -617,7 +617,7 @@ function App() {
               />
             </div>
 
-            {/* TITLE & TEXT */}
+            {/* TITLE & TEXT DESCRIPTION */}
             <div className="mb-8">
               <h5 className="text-xs capitalize md:text-xl text-center px-3">
                 natatanging kawani ng pamahalaang panglungsod ng san pablo
@@ -641,14 +641,202 @@ function App() {
           </div>
         </section>
 
+        {/* TEASER SECTION FOR WINNERS */}
+        <section className="lg:min-h-screen bg-amber-50 flex justify-center items-center py-12 lg:py-0">
+          <div className="w-full max-w-6xl mx-auto px-4">
+            {/* Trophy image */}
+            {/* <div className="flex justify-center items-center mb-2">
+              <img
+                src="Trophy.png"
+                alt="Trophy"
+                className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] w-12 md:w-24"
+              />
+            </div> */}
+
+            {/* TITLE & TEXT DESCRIPTION */}
+            <div className="mb-8">
+              <h5 className="text-xs uppercase md:text-xl text-center px-3 text-gray-600">
+                natatanging kawani ng pamahalaang panglungsod ng san pablo
+              </h5>
+              <h3 className="font-medium text-2xl md:text-4xl text-center mt-1">
+                Mga Panalo sa Natatanging Kawani 2025
+              </h3>
+            </div>
+
+            {/* CARDS GRID */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+              {/* CARD - JOB ORDER */}
+              <div
+                className="group relative w-full h-56 md:h-85 overflow-hidden rounded-3xl border border-yellow-500/30
+                   bg-gradient-to-br from-neutral-900 via-black to-neutral-950 p-6 md:p-8
+                   shadow-[0_0_60px_rgba(234,179,8,0.15)]
+                   transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400/60
+                   flex flex-col justify-between"
+              >
+                {/* Gold glow */}
+                <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-yellow-500/10 blur-3xl transition-all duration-300 group-hover:bg-yellow-500/20" />
+
+                {/* Header */}
+                <header className="relative flex items-center justify-between">
+                  <span className="text-xs md:text-sm font-semibold tracking-[0.2em] md:tracking-[0.3em] text-yellow-400 uppercase leading-tight max-w-[70%]">
+                    Job Order
+                  </span>
+                </header>
+
+                {/* Placeholder icon */}
+                <div className="relative flex-1 flex items-center justify-center my-3">
+                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-dashed border-yellow-500/30 flex items-center justify-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-6 h-6 md:w-7 md:h-7 text-yellow-500/40"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.1L12 16.3l-6.3 4.4 2.3-7.1-6-4.4h7.6z" />
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Footer */}
+                <p className="relative text-xs md:text-sm text-yellow-500/50 uppercase tracking-widest font-medium">
+                  To be revealed
+                </p>
+              </div>
+
+              {/* CARD - 1st Level */}
+              <div
+                className="group relative w-full h-56 md:h-85 overflow-hidden rounded-3xl border border-yellow-500/30
+                   bg-gradient-to-br from-neutral-900 via-black to-neutral-950 p-6 md:p-8
+                   shadow-[0_0_60px_rgba(234,179,8,0.15)]
+                   transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400/60
+                   flex flex-col justify-between"
+              >
+                <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-yellow-500/10 blur-3xl transition-all duration-300 group-hover:bg-yellow-500/20" />
+
+                <header className="relative flex items-center justify-between">
+                  <span className="text-xs md:text-sm font-semibold tracking-[0.2em] md:tracking-[0.3em] text-yellow-400 uppercase leading-tight max-w-[70%]">
+                    1st Level
+                  </span>
+                </header>
+
+                <div className="relative flex-1 flex items-center justify-center my-3">
+                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-dashed border-yellow-500/30 flex items-center justify-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-6 h-6 md:w-7 md:h-7 text-yellow-500/40"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.1L12 16.3l-6.3 4.4 2.3-7.1-6-4.4h7.6z" />
+                    </svg>
+                  </div>
+                </div>
+
+                <p className="relative text-xs md:text-sm text-yellow-500/50 uppercase tracking-widest font-medium">
+                  To be revealed
+                </p>
+              </div>
+
+              {/* CARD - 2nd Level */}
+              <div
+                className="group relative w-full h-56 md:h-85 overflow-hidden rounded-3xl border border-yellow-500/30
+                   bg-gradient-to-br from-neutral-900 via-black to-neutral-950 p-6 md:p-8
+                   shadow-[0_0_60px_rgba(234,179,8,0.15)]
+                   transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400/60
+                   flex flex-col justify-between"
+              >
+                <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-yellow-500/10 blur-3xl transition-all duration-300 group-hover:bg-yellow-500/20" />
+
+                <header className="relative flex items-center justify-between">
+                  <span className="text-xs md:text-sm font-semibold tracking-[0.2em] md:tracking-[0.3em] text-yellow-400 uppercase leading-tight max-w-[70%]">
+                    2nd Level
+                  </span>
+                </header>
+
+                <div className="relative flex-1 flex items-center justify-center my-3">
+                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-dashed border-yellow-500/30 flex items-center justify-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-6 h-6 md:w-7 md:h-7 text-yellow-500/40"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.1L12 16.3l-6.3 4.4 2.3-7.1-6-4.4h7.6z" />
+                    </svg>
+                  </div>
+                </div>
+
+                <p className="relative text-xs md:text-sm text-yellow-500/50 uppercase tracking-widest font-medium">
+                  To be revealed
+                </p>
+              </div>
+
+              {/* CARD - PLSP */}
+              <div
+                className="group relative w-full h-56 md:h-85 overflow-hidden rounded-3xl border border-yellow-500/30
+                   bg-gradient-to-br from-neutral-900 via-black to-neutral-950 p-6 md:p-8
+                   shadow-[0_0_60px_rgba(234,179,8,0.15)]
+                   transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400/60
+                   flex flex-col justify-between"
+              >
+                <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-yellow-500/10 blur-3xl transition-all duration-300 group-hover:bg-yellow-500/20" />
+
+                <header className="relative flex items-center justify-between">
+                  <span className="text-xs md:text-sm font-semibold tracking-[0.2em] md:tracking-[0.3em] text-yellow-400 uppercase leading-tight max-w-[70%]">
+                    PLSP
+                  </span>
+                  {/* <div className="flex-shrink-0 flex h-9 w-9 md:h-10 md:w-10 items-center justify-center rounded-full border border-yellow-500/40">
+                    <span className="text-base md:text-lg text-yellow-400">
+                      ✦
+                    </span>
+                  </div> */}
+                </header>
+
+                <div className="relative flex-1 flex items-center justify-center my-3">
+                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-dashed border-yellow-500/30 flex items-center justify-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-6 h-6 md:w-7 md:h-7 text-yellow-500/40"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.1L12 16.3l-6.3 4.4 2.3-7.1-6-4.4h7.6z" />
+                    </svg>
+                  </div>
+                </div>
+
+                <p className="relative text-xs md:text-sm text-yellow-500/50 uppercase tracking-widest font-medium">
+                  To be revealed
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CARD - LOYALTY AWARDEES */}
-        <section className="bg-amber-100 p-6 rounded-lg shadow-lg m-12 md:m-20">
+        <section className="bg-gradient-to-tr from-yellow-300 via-amber-400 to-yellow-700 pt-6 rounded-lg shadow-lg m-6 md:m-20">
           <div className="flex flex-col items-center space-x-4">
             <div className="text-center mb-6">
-              <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-800 text-center">
+              <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-100 text-center">
                 LOYALTY AWARDEES 2026
               </h1>
-              <span className="text-gray-600 text-center text-sm">
+              <span className="text-gray-200 text-center text-sm">
                 Recognizing Decades of Service Excellence
               </span>
             </div>
