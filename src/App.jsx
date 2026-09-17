@@ -655,11 +655,12 @@ function App() {
 
             {/* TITLE & TEXT DESCRIPTION */}
             <div className="mb-8">
-              <h5 className="text-xs uppercase md:text-xl text-center px-3 text-gray-600">
-                natatanging kawani ng pamahalaang panglungsod ng san pablo
+              <h5 className="text-xs uppercase md:text-xl text-center px-3 text-amber-700 font-semibold">
+                Natatanging Kawani ng Pamahalaang Panglungsod ng San Pablo
               </h5>
-              <h3 className="font-medium text-2xl md:text-4xl text-center mt-1">
-                Mga Panalo sa Natatanging Kawani 2025
+
+              <h3 className="font-medium text-2xl md:text-4xl text-center mt-1 text-gray-950 drop-shadow-sm">
+                Mga Nagwagi: Natatanging Kawani 2025
               </h3>
             </div>
 
@@ -683,9 +684,9 @@ function App() {
                   </span>
                 </header>
 
-                {/* Placeholder icon */}
+                {/* Placeholder icon/img */}
                 <div className="relative flex-1 flex items-center justify-center my-3">
-                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-dashed border-yellow-500/30 flex items-center justify-center">
+                  {/* <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-dashed border-yellow-500/30 flex items-center justify-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="w-6 h-6 md:w-7 md:h-7 text-yellow-500/40"
@@ -698,7 +699,11 @@ function App() {
                     >
                       <path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.1L12 16.3l-6.3 4.4 2.3-7.1-6-4.4h7.6z" />
                     </svg>
-                  </div>
+                  </div> */}
+                  <img
+                    src="NKPLSP.png"
+                    className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-22 md:w-32"
+                  />
                 </div>
 
                 {/* Footer */}
@@ -723,8 +728,9 @@ function App() {
                   </span>
                 </header>
 
+                {/* Placeholder icon/img */}
                 <div className="relative flex-1 flex items-center justify-center my-3">
-                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-dashed border-yellow-500/30 flex items-center justify-center">
+                  {/* <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-dashed border-yellow-500/30 flex items-center justify-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="w-6 h-6 md:w-7 md:h-7 text-yellow-500/40"
@@ -737,7 +743,11 @@ function App() {
                     >
                       <path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.1L12 16.3l-6.3 4.4 2.3-7.1-6-4.4h7.6z" />
                     </svg>
-                  </div>
+                  </div> */}
+                  <img
+                    src="NKPLSP.png"
+                    className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-22 md:w-32"
+                  />
                 </div>
 
                 <p className="relative text-xs md:text-sm text-yellow-500/50 uppercase tracking-widest font-medium">
@@ -761,8 +771,9 @@ function App() {
                   </span>
                 </header>
 
+                {/* Placeholder icon/img */}
                 <div className="relative flex-1 flex items-center justify-center my-3">
-                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-dashed border-yellow-500/30 flex items-center justify-center">
+                  {/* <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-dashed border-yellow-500/30 flex items-center justify-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="w-6 h-6 md:w-7 md:h-7 text-yellow-500/40"
@@ -775,7 +786,11 @@ function App() {
                     >
                       <path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.1L12 16.3l-6.3 4.4 2.3-7.1-6-4.4h7.6z" />
                     </svg>
-                  </div>
+                  </div> */}
+                  <img
+                    src="NKPLSP.png"
+                    className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-22 md:w-32"
+                  />
                 </div>
 
                 <p className="relative text-xs md:text-sm text-yellow-500/50 uppercase tracking-widest font-medium">
@@ -797,15 +812,11 @@ function App() {
                   <span className="text-xs md:text-sm font-semibold tracking-[0.2em] md:tracking-[0.3em] text-yellow-400 uppercase leading-tight max-w-[70%]">
                     PLSP
                   </span>
-                  {/* <div className="flex-shrink-0 flex h-9 w-9 md:h-10 md:w-10 items-center justify-center rounded-full border border-yellow-500/40">
-                    <span className="text-base md:text-lg text-yellow-400">
-                      ✦
-                    </span>
-                  </div> */}
                 </header>
 
+                {/* Placeholder icon/img */}
                 <div className="relative flex-1 flex items-center justify-center my-3">
-                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-dashed border-yellow-500/30 flex items-center justify-center">
+                  {/* <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-dashed border-yellow-500/30 flex items-center justify-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="w-6 h-6 md:w-7 md:h-7 text-yellow-500/40"
@@ -818,7 +829,11 @@ function App() {
                     >
                       <path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.1L12 16.3l-6.3 4.4 2.3-7.1-6-4.4h7.6z" />
                     </svg>
-                  </div>
+                  </div> */}
+                  <img
+                    src="NKPLSP.png"
+                    className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-22 md:w-32"
+                  />
                 </div>
 
                 <p className="relative text-xs md:text-sm text-yellow-500/50 uppercase tracking-widest font-medium">
@@ -831,6 +846,7 @@ function App() {
 
         {/* CARD - LOYALTY AWARDEES */}
         <section className="bg-gradient-to-tr from-yellow-300 via-amber-400 to-yellow-700 py-6 rounded-lg shadow-lg m-6 md:m-20">
+          {/* <section className="bg-[#e1b503] py-6 rounded-lg shadow-lg m-6 md:m-20"> */}
           <div className="flex flex-col items-center space-x-4">
             <div className="text-center mb-6">
               <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-100 text-center">
@@ -842,14 +858,14 @@ function App() {
             </div>
 
             {/* Years logo + Num of Awardee */}
-            <div className="grid grid-cols-2 md:flex gap-6">
+            <div className="grid grid-cols-2 md:flex gap-6 text-white">
               <div className="flex flex-col items-center justify-evenly px-6 py-3">
                 <img
                   src="25-logo.png"
                   className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-25 md:w-40"
                 />
 
-                <span className="text-gray-600 text-center capitalize text-xs md:text-lg mt-2">
+                <span className=" text-center capitalize text-xs md:text-lg mt-2">
                   42 Employees awardee
                 </span>
               </div>
@@ -859,7 +875,7 @@ function App() {
                   className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-25 md:w-40"
                 />
 
-                <span className="text-gray-600 text-center capitalize text-xs md:text-lg mt-2">
+                <span className=" text-center capitalize text-xs md:text-lg mt-2">
                   13 Employees awardee
                 </span>
               </div>
@@ -869,7 +885,7 @@ function App() {
                   className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-25 md:w-40"
                 />
 
-                <span className="text-gray-600 text-center capitalize text-xs md:text-lg mt-2">
+                <span className=" text-center capitalize text-xs md:text-lg mt-2">
                   4 Employees awardee
                 </span>
               </div>
@@ -879,7 +895,7 @@ function App() {
                   className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-25 md:w-40"
                 />
 
-                <span className="text-gray-600 text-center capitalize text-xs md:text-lg mt-2">
+                <span className=" text-center capitalize text-xs md:text-lg mt-2">
                   4 Employees awardee
                 </span>
               </div>
