@@ -1064,6 +1064,28 @@ function App() {
             </div>
           </div>
         </section>
+
+        {/* SECTION */}
+        <section className="flex flex-col min-h-svh items-center justify-center">
+          {/* TITLE & TEXT */}
+          <div className="mb-4">
+            <h3 className="font-medium text-3xl md:text-5xl text-center uppercase text-gray-800 filter drop-shadow-[0_0_0.25rem_#FFE28A] tracking-widest">
+            {/* <h3 className="font-medium text-3xl md:text-5xl text-center uppercase text-amber-500 filter drop-shadow-[0_0_0.25rem_#FFE28A] tracking-widest"> */}
+              Praise Comittee
+            </h3>
+            <h5 className="text-sm md:text-xl text-center font-medium">
+              Pamahalaang Lungsod ng San Pablo
+            </h5>
+          </div>
+
+          {/* BANNER FROM CSC */}
+          <div className="flex justify-center">
+            <img
+              src="PRAISE COMMITTEE.png"
+              className="w-[345px] md:w-[700px] backdrop-blur-lg bg-white border border-gray-200 rounded-2xl shadow-md md:col-span-1 object-fill"
+            />
+          </div>
+        </section>
       </main>
 
       {/* FOOTER */}
