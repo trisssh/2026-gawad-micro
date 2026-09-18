@@ -383,6 +383,7 @@ function App() {
 
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [wasPlayingBeforeVideo, setWasPlayingBeforeVideo] = useState(false);
 
   const toggleMusic = () => {
     const audio = audioRef.current;
@@ -396,6 +397,28 @@ function App() {
       });
     }
     setIsPlaying(!isPlaying);
+  };
+
+  // PLAY video
+  const duckForVideo = () => {
+    const audio = audioRef.current;
+    if (audio && isPlaying) {
+      audio.pause();
+      setIsPlaying(false);
+      setWasPlayingBeforeVideo(true);
+    } else {
+      setWasPlayingBeforeVideo(false);
+    }
+  };
+
+  // PAUSE or video ended
+  const restoreAfterVideo = () => {
+    const audio = audioRef.current;
+    if (audio && wasPlayingBeforeVideo) {
+      audio.play().catch((err) => console.error("Resume failed:", err));
+      setIsPlaying(true);
+      setWasPlayingBeforeVideo(false);
+    }
   };
 
   return (
@@ -532,6 +555,30 @@ function App() {
             <p className="text-[10px] md:text-xs text-white/70 text-center max-w-[80px] leading-tight">
               {isPlaying ? "Pause music" : "Play music"}
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* VIDEO TRAILER SECTION */}
+      <section className="bg-amber-50 py-12 md:py-16">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-center text-amber-700 text-xl md:text-3xl font-bold uppercase tracking-wide mb-2">
+            Gawad Parangal 2026
+          </h2>
+          <p className="text-center text-gray-800 text-sm md:text-base mb-8">
+            Official Event Trailer
+          </p>
+
+          <div className="rounded-2xl overflow-hidden border border-amber-400/20 shadow-[0_0_60px_rgba(234,179,8,0.1)]">
+            <video
+              src="Video.mp4"
+              controls
+              playsInline
+              className="w-full aspect-video bg-black"
+              onPlay={duckForVideo}
+              onPause={restoreAfterVideo}
+              onEnded={restoreAfterVideo}
+            />
           </div>
         </div>
       </section>
