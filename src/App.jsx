@@ -126,8 +126,8 @@ function App() {
     },
 
     {
-      title: "MGA NOMINADO MULA SA DLSP AWARDEES",
-      subtitle: "Nominees from DLSP",
+      title: "DLSP AWARDEES",
+      subtitle: "Awardees from DLSP",
       nominees: [
         {
           image: "/NOMINEES/PLSP/BELEN.png",
@@ -381,6 +381,23 @@ function App() {
     },
   ];
 
+  const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const toggleMusic = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      audio.play().catch((err) => {
+        console.error("Playback failed:", err);
+      });
+    }
+    setIsPlaying(!isPlaying);
+  };
+
   return (
     <>
       {/* HERO - BANNER */}
@@ -478,6 +495,44 @@ function App() {
               September 25, 2026
             </span>
           </p>
+
+          {/* Music toggle button — lower left */}
+          <div className="absolute bottom-5 left-5 md:bottom-8 md:left-8 z-20 flex flex-col items-center gap-1.5">
+            <button
+              onClick={toggleMusic}
+              aria-label={isPlaying ? "Pause music" : "Play music"}
+              className="w-11 h-11 md:w-12 md:h-12 rounded-full
+               bg-white/10 backdrop-blur-sm border border-amber-400/40
+               flex items-center justify-center
+               text-amber-400 hover:bg-amber-400 hover:text-black
+               transition-colors duration-300"
+            >
+              {isPlaying ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-4 h-4 md:w-5 md:h-5"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <rect x="6" y="4" width="4" height="16" rx="1" />
+                  <rect x="14" y="4" width="4" height="16" rx="1" />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-4 h-4 md:w-5 md:h-5 ml-0.5"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M6 4l14 8-14 8V4z" />
+                </svg>
+              )}
+            </button>
+
+            <p className="text-[10px] md:text-xs text-white/70 text-center max-w-[80px] leading-tight">
+              {isPlaying ? "Pause music" : "Play music"}
+            </p>
+          </div>
         </div>
       </section>
 
@@ -485,6 +540,14 @@ function App() {
       <main>
         {/* ABOUT - DESCRIPTION SECTION */}
         <section className="flex flex-col min-h-svh md:min-h-dvh items-center justify-center">
+          {/* Hidden audio element */}
+          <audio
+            ref={audioRef}
+            src="Awit ng Serbisyo Sibil Instrumental with Lyrics.mp3"
+            loop
+            preload="none"
+          />
+
           <div className="mb-4">
             {/* ROUND BTN STYLE DATE */}
             <div className="grid justify-center mb-4">
@@ -685,7 +748,7 @@ function App() {
             </div>
 
             {/* CARDS GRID */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
               {/* CARD - JOB ORDER */}
               <div
                 className="group relative w-full h-56 md:h-85 overflow-hidden rounded-3xl border border-yellow-500/30
@@ -819,7 +882,7 @@ function App() {
               </div>
 
               {/* CARD - PLSP */}
-              <div
+              {/* <div
                 className="group relative w-full h-56 md:h-85 overflow-hidden rounded-3xl border border-yellow-500/30
                    bg-gradient-to-br from-neutral-900 via-black to-neutral-950 p-6 md:p-8
                    shadow-[0_0_60px_rgba(234,179,8,0.15)]
@@ -830,26 +893,12 @@ function App() {
 
                 <header className="relative flex items-center justify-between">
                   <span className="text-xs md:text-sm font-semibold tracking-[0.2em] md:tracking-[0.3em] text-yellow-400 uppercase leading-tight max-w-[70%]">
-                    PLSP
+                    DLSP
                   </span>
                 </header>
 
-                {/* Placeholder icon/img */}
+  
                 <div className="relative flex-1 flex items-center justify-center my-3">
-                  {/* <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-dashed border-yellow-500/30 flex items-center justify-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-6 h-6 md:w-7 md:h-7 text-yellow-500/40"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.1L12 16.3l-6.3 4.4 2.3-7.1-6-4.4h7.6z" />
-                    </svg>
-                  </div> */}
                   <img
                     src="NKPLSP.png"
                     className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-22 md:w-32"
@@ -859,7 +908,7 @@ function App() {
                 <p className="relative text-xs md:text-sm text-yellow-500/50 uppercase tracking-widest font-medium">
                   To be revealed
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -1085,12 +1134,12 @@ function App() {
           </div>
         </section>
 
-        {/* SECTION */}
+        {/* Praise Comittee SECTION */}
         <section className="flex flex-col min-h-svh items-center justify-center">
           {/* TITLE & TEXT */}
           <div className="mb-4">
             <h3 className="font-medium text-3xl md:text-5xl text-center uppercase text-gray-800 filter drop-shadow-[0_0_0.25rem_#FFE28A] tracking-widest">
-            {/* <h3 className="font-medium text-3xl md:text-5xl text-center uppercase text-amber-500 filter drop-shadow-[0_0_0.25rem_#FFE28A] tracking-widest"> */}
+              {/* <h3 className="font-medium text-3xl md:text-5xl text-center uppercase text-amber-500 filter drop-shadow-[0_0_0.25rem_#FFE28A] tracking-widest"> */}
               Praise Comittee
             </h3>
             <h5 className="text-sm md:text-xl text-center font-medium">
