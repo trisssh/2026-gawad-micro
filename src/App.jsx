@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import heroImg from "./assets/hero.png";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
@@ -125,17 +125,37 @@ function App() {
       ],
     },
 
-    // {
-    //   title: "MGA NOMINADO MULA SA PLSP AWARDEES",
-    //   subtitle: "PLSP Awardees",
-    //   nominees: [
-    //     {
-    //       image: "/NOMINEES/PLSP/NOMINEE.png",
-    //       name: "COMPLETE NAME OF NOMINEE",
-    //       department: "Department/Office",
-    //     },
-    //   ],
-    // },
+    {
+      title: "MGA NOMINADO MULA SA DLSP AWARDEES",
+      subtitle: "Nominees from DLSP",
+      nominees: [
+        {
+          image: "/NOMINEES/PLSP/BELEN.png",
+          name: "BELEN, ARNOLD E.",
+          department: "Dalubhasaan ng Lunsod ng San Pablo ",
+        },
+        {
+          image: "/NOMINEES/PLSP/CARMONA.png",
+          name: "CARMONA, EVANGELINE",
+          department: "Dalubhasaan ng Lunsod ng San Pablo ",
+        },
+        {
+          image: "/NOMINEES/PLSP/JESUSCO.png",
+          name: "JESUSCO, EVAN",
+          department: "Dalubhasaan ng Lunsod ng San Pablo ",
+        },
+        {
+          image: "/NOMINEES/PLSP/MATEOS.png",
+          name: "MATEOS, FRANCISCO",
+          department: "Dalubhasaan ng Lunsod ng San Pablo ",
+        },
+        {
+          image: "/NOMINEES/PLSP/TOLENTINO.png",
+          name: "TOLENTINO, DARIA A.",
+          department: "Dalubhasaan ng Lunsod ng San Pablo ",
+        },
+      ],
+    },
   ];
 
   const loyalty25 = [
