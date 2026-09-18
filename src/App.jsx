@@ -384,6 +384,7 @@ function App() {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [wasPlayingBeforeVideo, setWasPlayingBeforeVideo] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   const toggleMusic = () => {
     const audio = audioRef.current;
@@ -419,6 +420,20 @@ function App() {
       setIsPlaying(true);
       setWasPlayingBeforeVideo(false);
     }
+  };
+
+  // Scroll listener 
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 5000);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -1252,6 +1267,38 @@ function App() {
           />
         </div>
       </footer>
+
+      {/* Scroll to top button */}
+      <button
+        onClick={scrollToTop}
+        aria-label="Scroll to top"
+        className={`fixed bottom-5 right-5 md:bottom-8 md:right-8 z-30
+                   w-11 h-11 md:w-12 md:h-12 rounded-full
+                   bg-amber-500 text-black
+                   shadow-lg shadow-amber-500/30
+                   flex items-center justify-center
+                   transition-all duration-300
+                   hover:bg-amber-400 active:scale-95
+                   ${
+                     showScrollTop
+                       ? "opacity-100 translate-y-0 pointer-events-auto"
+                       : "opacity-0 translate-y-4 pointer-events-none"
+                   }`}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-5 h-5 md:w-6 md:h-6"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M12 19V5" />
+          <path d="M5 12l7-7 7 7" />
+        </svg>
+      </button>
     </>
   );
 }
