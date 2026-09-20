@@ -386,19 +386,24 @@ function App() {
   const [wasPlayingBeforeVideo, setWasPlayingBeforeVideo] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
-  const toggleMusic = () => {
-    const audio = audioRef.current;
-    if (!audio) return;
+const MUSIC_START_TIME = 4;
 
-    if (isPlaying) {
-      audio.pause();
-    } else {
-      audio.play().catch((err) => {
-        console.error("Playback failed:", err);
-      });
+const toggleMusic = () => {
+  const audio = audioRef.current;
+  if (!audio) return;
+
+  if (isPlaying) {
+    audio.pause();
+  } else {
+    if (audio.currentTime === 0) {
+      audio.currentTime = MUSIC_START_TIME;
     }
-    setIsPlaying(!isPlaying);
-  };
+    audio.play().catch((err) => {
+      console.error("Playback failed:", err);
+    });
+  }
+  setIsPlaying(!isPlaying);
+};
 
   // PLAY video
   const duckForVideo = () => {
