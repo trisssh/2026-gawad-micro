@@ -14,7 +14,6 @@ function App() {
   // const targetDate = "2026-09-16T17:00:00";
 
   const nomineeSections = [
-
     {
       title: "MGA NOMINADO MULA SA JOB ORDER",
       subtitle: "6 Nominees from Job Order",
@@ -169,6 +168,10 @@ function App() {
       alt: "ARLENE B. BUNQUIN",
     },
     {
+      image: "./LOYALTY/25 YEARS/ROMMEL A. AUSTRIA.png",
+      alt: "ROMMEL A. AUSTRIA",
+    },
+    {
       image: "./LOYALTY/25 YEARS/ARNOLD E. BELEN.png",
       alt: "ARNOLD E. BELEN",
     },
@@ -317,20 +320,12 @@ function App() {
       alt: "XENIA D. DEOMANO - ADAJAR",
     },
     {
-      image: "./LOYALTY/25 YEARS/LOIDA U. ENRIQUEZ.png",
-      alt: "LOIDA U. ENRIQUEZ",
-    },
-    {
       image: "./LOYALTY/25 YEARS/GERALD C. MANALO.png",
       alt: "GERALD C. MANALO",
     },
     {
       image: "./LOYALTY/25 YEARS/LEOVINO R. EXCONDE.png",
       alt: "LEOVINO R. EXCONDE",
-    },
-    {
-      image: "./LOYALTY/25 YEARS/NORA A. DEVANADERA.png",
-      alt: "NORA A. DEVANADERA",
     },
   ];
 
@@ -351,6 +346,10 @@ function App() {
     {
       image: "./LOYALTY/30 YEARS/ELIZER B. ALIMON.png",
       alt: "ELIZER B. ALIMON",
+    },
+    {
+      image: "./LOYALTY/30 YEARS/ENRIQUE B. DUNGO.png",
+      alt: "ENRIQUE B. DUNGO",
     },
     {
       image: "./LOYALTY/30 YEARS/EPIFANIO R. BAGONA.png",
@@ -423,7 +422,7 @@ function App() {
     }
   };
 
-  // Scroll listener 
+  // Scroll listener
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 5000);
