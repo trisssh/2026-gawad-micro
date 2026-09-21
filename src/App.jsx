@@ -629,7 +629,7 @@ const toggleMusic = () => {
                 Gawad Parangal
               </h3>
               <h5 className="text-sm md:text-xl text-center">
-                Pamahalaang Lungsod ng San Pablo
+                Pamahalaan ng Lungsod ng San Pablo
               </h5>
             </div>
 
@@ -770,7 +770,7 @@ const toggleMusic = () => {
             {/* TITLE & TEXT DESCRIPTION */}
             <div className="mb-8">
               <h5 className="text-xs capitalize md:text-xl text-center px-3">
-                natatanging kawani ng pamahalaang panglungsod ng san pablo
+                natatanging kawani ng pamahalaan ng panglungsod ng san pablo
               </h5>
               <h3 className="font-medium text-2xl md:text-4xl text-center">
                 MGA NOMINADO PARA SA MGA NATATANGING KAWANI 2025
@@ -806,7 +806,7 @@ const toggleMusic = () => {
             {/* TITLE & TEXT DESCRIPTION */}
             <div className="mb-8">
               <h5 className="text-xs uppercase md:text-xl text-center px-3 text-amber-700 font-semibold">
-                Natatanging Kawani ng Pamahalaang Panglungsod ng San Pablo
+                Natatanging Kawani ng Pamahalaan ng Panglungsod ng San Pablo
               </h5>
 
               <h3 className="font-medium text-2xl md:text-4xl text-center mt-1 text-gray-950 drop-shadow-sm">
@@ -1210,7 +1210,7 @@ const toggleMusic = () => {
               Praise Comittee
             </h3>
             <h5 className="text-sm md:text-xl text-center font-medium">
-              Pamahalaang Lungsod ng San Pablo
+              Pamahalaan ng Lungsod ng San Pablo
             </h5>
           </div>
 
