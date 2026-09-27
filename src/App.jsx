@@ -579,32 +579,32 @@ const toggleMusic = () => {
         </div>
       </section>
 
-      {/* VIDEO TRAILER SECTION */}
-      <section className="bg-amber-50 py-12 md:py-16">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-center text-amber-700 text-xl md:text-3xl font-bold uppercase tracking-wide mb-2">
-            Gawad Parangal 2026
-          </h2>
-          <p className="text-center text-gray-800 text-sm md:text-base mb-8">
-            Official Event Trailer
-          </p>
-
-          <div className="rounded-2xl overflow-hidden border border-amber-400/20 shadow-[0_0_60px_rgba(234,179,8,0.1)]">
-            <video
-              src="Video.mp4"
-              controls
-              playsInline
-              className="w-full aspect-video bg-black"
-              onPlay={duckForVideo}
-              onPause={restoreAfterVideo}
-              onEnded={restoreAfterVideo}
-            />
-          </div>
-        </div>
-      </section>
-
       {/* MAIN CONTENT */}
       <main>
+        {/* VIDEO TRAILER SECTION */}
+        <section className="bg-amber-50 py-12 md:py-16">
+          <div className="max-w-4xl mx-auto px-4">
+            <h2 className="text-center text-amber-700 text-xl md:text-3xl font-bold uppercase tracking-wide mb-2">
+              Gawad Parangal 2026
+            </h2>
+            <p className="text-center text-gray-800 text-sm md:text-base mb-8">
+              Official Event Trailer
+            </p>
+
+            <div className="rounded-2xl overflow-hidden border border-amber-400/20 shadow-[0_0_60px_rgba(234,179,8,0.1)]">
+              <video
+                src="Video.mp4"
+                controls
+                playsInline
+                className="w-full aspect-video bg-black"
+                onPlay={duckForVideo}
+                onPause={restoreAfterVideo}
+                onEnded={restoreAfterVideo}
+              />
+            </div>
+          </div>
+        </section>
+
         {/* ABOUT - DESCRIPTION SECTION */}
         <section className="flex flex-col min-h-svh md:min-h-dvh items-center justify-center">
           {/* Hidden audio element */}
@@ -793,189 +793,141 @@ const toggleMusic = () => {
 
         {/* TEASER SECTION FOR WINNERS */}
         <section className="lg:min-h-screen bg-amber-50 flex justify-center items-center py-12 lg:py-0">
-          <div className="w-full max-w-6xl mx-auto px-4">
+          <div className="w-full max-w-7xl mx-auto px-4">
             {/* Trophy image */}
-            {/* <div className="flex justify-center items-center mb-2">
+            <div className="flex justify-center items-center mb-2">
               <img
                 src="Trophy.png"
                 alt="Trophy"
                 className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] w-12 md:w-24"
               />
-            </div> */}
+            </div>
 
             {/* TITLE & TEXT DESCRIPTION */}
             <div className="mb-8">
-              <h5 className="text-xs uppercase md:text-xl text-center px-3 text-amber-700 font-semibold">
-                Natatanging Kawani ng Pamahalaan ng Panglungsod ng San Pablo
+              <h5 className="text-xs uppercase md:text-xl text-center px-3 text-gray-600">
+                Ang mga nagwagi sa bawat kategorya bilang natatanging kawani
+                para sa taong 2025
               </h5>
-
-              <h3 className="font-medium text-2xl md:text-4xl text-center mt-1 text-gray-950 drop-shadow-sm">
-                Mga Nagwagi: Natatanging Kawani 2025
+              <h3 className="font-medium text-2xl md:text-4xl text-center mt-1">
+                Natatanging Kawani ng Pamahalaan ng Lungsod ng San
+                Pablo 2025 (NKPLSP 2025)
               </h3>
             </div>
 
             {/* CARDS GRID */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5 md:gap-6">
               {/* CARD - JOB ORDER */}
               <div
-                className="group relative w-full h-56 md:h-85 overflow-hidden rounded-3xl border border-yellow-500/30
-                   bg-gradient-to-br from-neutral-900 via-black to-neutral-950 p-6 md:p-8
+                className="group relative w-full max-w-sm h-auto min-h-[300px] md:h-85 overflow-hidden rounded-3xl border border-yellow-500/30
+                   bg-gradient-to-br from-neutral-900 via-black to-neutral-950 p-5 md:p-8
                    shadow-[0_0_60px_rgba(234,179,8,0.15)]
                    transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400/60
-                   flex flex-col justify-between"
+                   flex flex-col"
               >
                 {/* Gold glow */}
                 <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-yellow-500/10 blur-3xl transition-all duration-300 group-hover:bg-yellow-500/20" />
 
                 {/* Header */}
-                <header className="relative flex items-center justify-between">
-                  <span className="text-xs md:text-sm font-semibold tracking-[0.2em] md:tracking-[0.3em] text-yellow-400 uppercase leading-tight max-w-[70%]">
+                <header className="relative flex items-center justify-between mb-2">
+                  <span className="text-xs md:text-sm font-semibold tracking-[0.2em] md:tracking-[0.3em] text-yellow-400 uppercase leading-tight">
                     Job Order
                   </span>
                 </header>
 
-                {/* Placeholder icon/img */}
-                <div className="relative flex-1 flex items-center justify-center my-3">
-                  {/* <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-dashed border-yellow-500/30 flex items-center justify-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-6 h-6 md:w-7 md:h-7 text-yellow-500/40"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.1L12 16.3l-6.3 4.4 2.3-7.1-6-4.4h7.6z" />
-                    </svg>
-                  </div> */}
+                {/* Photo */}
+                <div className="relative flex items-center justify-center py-3 md:py-4">
                   <img
-                    src="NKPLSP.png"
-                    className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-22 md:w-32"
+                    src="/NOMINEES/JOB ORDER/MIRAL.png"
+                    alt="MIRAL, MAYBELL B."
+                    className="flex-shrink-0 filter drop-shadow-[0_0_0.25rem_#2b2b2b]
+                       rounded-full w-45 h-45
+                       object-cover bg-[#2b2b2b] border-2 border-amber-400"
                   />
                 </div>
 
                 {/* Footer */}
-                <p className="relative text-xs md:text-sm text-yellow-500/50 uppercase tracking-widest font-medium">
-                  To be revealed
-                </p>
+                <div className="relative flex flex-col items-center text-center mt-auto pt-2">
+                  <h4 className="font-semibold text-sm md:text-xl leading-tight line-clamp-2 break-words text-yellow-500 uppercase tracking-widest">
+                    MIRAL, MAYBELL B.
+                  </h4>
+                  <h6 className="text-xs md:text-sm text-gray-300 mt-1 line-clamp-1">
+                    City Mayor's Office
+                  </h6>
+                </div>
               </div>
 
               {/* CARD - 1st Level */}
               <div
-                className="group relative w-full h-56 md:h-85 overflow-hidden rounded-3xl border border-yellow-500/30
-                   bg-gradient-to-br from-neutral-900 via-black to-neutral-950 p-6 md:p-8
+                className="group relative w-full max-w-sm h-auto min-h-[300px] md:h-85 overflow-hidden rounded-3xl border border-yellow-500/30
+                   bg-gradient-to-br from-neutral-900 via-black to-neutral-950 p-5 md:p-8
                    shadow-[0_0_60px_rgba(234,179,8,0.15)]
                    transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400/60
-                   flex flex-col justify-between"
+                   flex flex-col"
               >
                 <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-yellow-500/10 blur-3xl transition-all duration-300 group-hover:bg-yellow-500/20" />
 
-                <header className="relative flex items-center justify-between">
-                  <span className="text-xs md:text-sm font-semibold tracking-[0.2em] md:tracking-[0.3em] text-yellow-400 uppercase leading-tight max-w-[70%]">
+                <header className="relative flex items-center justify-between mb-2">
+                  <span className="text-xs md:text-sm font-semibold tracking-[0.2em] md:tracking-[0.3em] text-yellow-400 uppercase leading-tight">
                     1st Level
                   </span>
                 </header>
 
-                {/* Placeholder icon/img */}
-                <div className="relative flex-1 flex items-center justify-center my-3">
-                  {/* <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-dashed border-yellow-500/30 flex items-center justify-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-6 h-6 md:w-7 md:h-7 text-yellow-500/40"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.1L12 16.3l-6.3 4.4 2.3-7.1-6-4.4h7.6z" />
-                    </svg>
-                  </div> */}
+                <div className="relative flex items-center justify-center py-3 md:py-4">
                   <img
-                    src="NKPLSP.png"
-                    className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-22 md:w-32"
+                    src="/NOMINEES/1ST LEVEL/ECO.png"
+                    alt="ECO, JEANNELYN M."
+                    className="flex-shrink-0 filter drop-shadow-[0_0_0.25rem_#2b2b2b]
+                       rounded-full w-45 h-45
+                       object-cover bg-[#2b2b2b] border-2 border-amber-400"
                   />
                 </div>
 
-                <p className="relative text-xs md:text-sm text-yellow-500/50 uppercase tracking-widest font-medium">
-                  To be revealed
-                </p>
+                <div className="relative flex flex-col items-center text-center mt-auto pt-2">
+                  <h4 className="font-semibold text-sm md:text-xl leading-tight line-clamp-2 break-words text-yellow-500 uppercase tracking-widest">
+                    ECO, JEANNELYN M.
+                  </h4>
+                  <h6 className="text-xs md:text-sm text-gray-300 mt-1 line-clamp-1">
+                    City Tourism Office
+                  </h6>
+                </div>
               </div>
 
               {/* CARD - 2nd Level */}
               <div
-                className="group relative w-full h-56 md:h-85 overflow-hidden rounded-3xl border border-yellow-500/30
-                   bg-gradient-to-br from-neutral-900 via-black to-neutral-950 p-6 md:p-8
+                className="group relative w-full max-w-sm h-auto min-h-[300px] md:h-85 overflow-hidden rounded-3xl border border-yellow-500/30
+                   bg-gradient-to-br from-neutral-900 via-black to-neutral-950 p-5 md:p-8
                    shadow-[0_0_60px_rgba(234,179,8,0.15)]
                    transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400/60
-                   flex flex-col justify-between"
+                   flex flex-col"
               >
                 <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-yellow-500/10 blur-3xl transition-all duration-300 group-hover:bg-yellow-500/20" />
 
-                <header className="relative flex items-center justify-between">
-                  <span className="text-xs md:text-sm font-semibold tracking-[0.2em] md:tracking-[0.3em] text-yellow-400 uppercase leading-tight max-w-[70%]">
+                <header className="relative flex items-center justify-between mb-2">
+                  <span className="text-xs md:text-sm font-semibold tracking-[0.2em] md:tracking-[0.3em] text-yellow-400 uppercase leading-tight">
                     2nd Level
                   </span>
                 </header>
 
-                {/* Placeholder icon/img */}
-                <div className="relative flex-1 flex items-center justify-center my-3">
-                  {/* <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-dashed border-yellow-500/30 flex items-center justify-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-6 h-6 md:w-7 md:h-7 text-yellow-500/40"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.1L12 16.3l-6.3 4.4 2.3-7.1-6-4.4h7.6z" />
-                    </svg>
-                  </div> */}
+                <div className="relative flex items-center justify-center py-3 md:py-4">
                   <img
-                    src="NKPLSP.png"
-                    className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-22 md:w-32"
+                    src="/NOMINEES/2ND LEVEL/MALIJAN.JPG"
+                    alt="MALIJAN, MARITES S."
+                    className="flex-shrink-0 filter drop-shadow-[0_0_0.25rem_#2b2b2b]
+                       rounded-full w-45 h-45
+                       object-cover bg-[#2b2b2b] border-2 border-amber-400"
                   />
                 </div>
 
-                <p className="relative text-xs md:text-sm text-yellow-500/50 uppercase tracking-widest font-medium">
-                  To be revealed
-                </p>
+                <div className="relative flex flex-col items-center text-center mt-auto pt-2">
+                  <h4 className="font-semibold text-sm md:text-xl leading-tight line-clamp-2 break-words text-yellow-500 uppercase tracking-widest">
+                    MALIJAN, MARITES S.
+                  </h4>
+                  <h6 className="text-xs md:text-sm text-gray-300 mt-1 line-clamp-1">
+                    City Agriculturist's Office
+                  </h6>
+                </div>
               </div>
-
-              {/* CARD - PLSP */}
-              {/* <div
-                className="group relative w-full h-56 md:h-85 overflow-hidden rounded-3xl border border-yellow-500/30
-                   bg-gradient-to-br from-neutral-900 via-black to-neutral-950 p-6 md:p-8
-                   shadow-[0_0_60px_rgba(234,179,8,0.15)]
-                   transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400/60
-                   flex flex-col justify-between"
-              >
-                <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-yellow-500/10 blur-3xl transition-all duration-300 group-hover:bg-yellow-500/20" />
-
-                <header className="relative flex items-center justify-between">
-                  <span className="text-xs md:text-sm font-semibold tracking-[0.2em] md:tracking-[0.3em] text-yellow-400 uppercase leading-tight max-w-[70%]">
-                    DLSP
-                  </span>
-                </header>
-
-  
-                <div className="relative flex-1 flex items-center justify-center my-3">
-                  <img
-                    src="NKPLSP.png"
-                    className="filter drop-shadow-[0_0_0.25rem_#2b2b2b] rounded-full w-22 md:w-32"
-                  />
-                </div>
-
-                <p className="relative text-xs md:text-sm text-yellow-500/50 uppercase tracking-widest font-medium">
-                  To be revealed
-                </p>
-              </div> */}
             </div>
           </div>
         </section>
